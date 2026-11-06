@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style data-omelette-print-defaults>
+@media print {
+  h1, h2, h3, h4, h5, h6 { break-after: avoid; }
+  figure, table, pre, blockquote, img, svg, tr, [class~="card" i] { break-inside: avoid; }
+  img, svg { max-width: 100%; }
+  p { orphans: 3; widows: 3; }
+}
+</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{background:#2fae18;font-family:'Manrope',system-ui,sans-serif;color:#06301c;-webkit-font-smoothing:antialiased}
+  a{color:#06301c;text-decoration:none}
+  a:hover{color:#04160d}
+  @keyframes scFadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+  @keyframes scPulse{0%,100%{opacity:.55;transform:scale(1)}50%{opacity:1;transform:scale(1.015)}}
+  @keyframes scSheen{0%{transform:translateX(-120%)}60%,100%{transform:translateX(320%)}}
+  @keyframes scFly{
+    0%{transform:translateX(-32vw) translateY(0);opacity:0}
+    8%{opacity:1}
+    50%{transform:translateX(44vw) translateY(-12px)}
+    92%{opacity:1}
+    100%{transform:translateX(126vw) translateY(0);opacity:0}
+  }
+  @keyframes scFloatSelo{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-14px) rotate(3deg)}}
+  @keyframes scBreath{0%,100%{transform:scale(1)}50%{transform:scale(1.025)}}
+  @keyframes scBlink{0%,90%{transform:scaleY(0)}93%{transform:scaleY(1)}96%{transform:scaleY(1)}99%,100%{transform:scaleY(0)}}
+  @keyframes scFloatIcon{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+  @keyframes scFloatChip{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-20px) rotate(-1deg)}}
+  @keyframes scGlow{0%,100%{box-shadow:0 0 0 2px #dff900,0 0 22px rgba(223,249,0,.5)}50%{box-shadow:0 0 0 2px #dff900,0 0 40px rgba(223,249,0,.85)}}
+  @media print{
+    @page{ margin:12mm; }
+    *{ animation:none!important; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    .sc-root{ overflow:visible!important; min-height:0!important; background-attachment:scroll!important; }
+    .sc-print-hide{ display:none!important; }
+    section{ page-break-inside:avoid; }
+  }
+</style>
+</helmet>
+<div class="sc-root" style="position:relative;overflow:hidden;min-height:100%;background:linear-gradient(rgba(35,150,15,.12),rgba(6,45,26,.28)),url('assets/fundo-ead.png');background-size:cover;background-position:center;background-attachment:fixed">
+
+  <!-- ===== HERO ===== -->
+  <div style="position:relative;overflow:hidden">
+    <!-- Selo VOCÊ flutuante -->
+    <img src="assets/selo-voce-lime.png" alt="Você" style="position:absolute;top:22px;right:24px;width:clamp(88px,9vw,138px);height:auto;z-index:4;pointer-events:none;filter:drop-shadow(0 6px 16px rgba(0,40,15,.35));animation:scFloatSelo 4.6s ease-in-out infinite"/>
+
+    <!-- Robô voando (nítido, com rastro de velocidade) -->
+    <img src="assets/robo.png" alt="" aria-hidden="true" class="sc-print-hide" style="position:absolute;top:56px;left:0;width:clamp(280px,32vw,480px);height:auto;z-index:100;pointer-events:none;filter:drop-shadow(-28px 0 12px rgba(0,45,18,.55)) drop-shadow(-56px 0 26px rgba(0,45,18,.34)) drop-shadow(-88px 0 38px rgba(0,45,18,.16));animation:scFly 13s linear infinite"/>
+
+    <div style="position:relative;z-index:3;max-width:1180px;margin:0 auto;padding:64px 28px 84px;text-align:center">
+      <header style="animation:scFadeUp .8s cubic-bezier(.16,1,.3,1) both">
+        <span style="display:inline-flex;align-items:center;gap:8px;padding:7px 16px;border-radius:999px;background:rgba(4,30,16,.82);box-shadow:inset 0 0 0 1px rgba(223,249,0,.35);font:600 12px/1 'Space Grotesk',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#dff900">
+          <span style="width:7px;height:7px;border-radius:50%;background:#dff900;box-shadow:0 0 10px #dff900"></span>Proposta Comercial
+        </span>
+        <div style="margin:26px auto 0;max-width:520px">
+          <img src="assets/super-logo-main.png" alt="Super Connect" style="display:block;width:100%;height:auto;filter:drop-shadow(0 14px 30px rgba(0,40,15,.35))"/>
+        </div>
+        <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Super Connect — Proposta Comercial</h1>
+        <div style="margin:22px auto 0;display:inline-flex;align-items:center;padding:9px 22px;border-radius:999px;background:#dff900;box-shadow:0 12px 26px -8px rgba(223,249,0,.6);font:700 13px/1 'Space Grotesk',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#06301c">Internet · TV · Telefonia · Câmeras</div>
+        <p style="margin:22px auto 0;max-width:640px;font:500 19px/1.5 'Manrope',sans-serif;color:#fff;text-shadow:0 2px 14px rgba(0,40,20,.45);text-wrap:pretty">
+          As melhores soluções de conexão — <span style="color:#dff900;font-weight:800">fibra óptica de alta performance</span> para sua casa e empresa.
+        </p>
+      </header>
+    </div>
+  </div>
+
+  <div style="position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:60px 28px 100px">
+
+    <!-- SEÇÃO 1: PREMIUM -->
+    <section style="position:relative;animation:scFadeUp .8s cubic-bezier(.16,1,.3,1) both .1s">
+      <div style="text-align:center;margin-bottom:12px">
+        <span style="font:700 12.5px/1 'Space Grotesk',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#dff900;text-shadow:0 1px 8px rgba(0,40,20,.5)">Seção 01</span>
+      </div>
+      <h2 style="margin:0 0 14px;text-align:center;font:700 clamp(34px,5vw,56px)/1.03 'Space Grotesk',sans-serif;color:#fff;letter-spacing:-.02em;text-shadow:0 3px 18px rgba(0,40,20,.45)">Planos Básicos de Fibra</h2>
+      <div style="width:78px;height:5px;border-radius:3px;background:#dff900;margin:0 auto 18px;box-shadow:0 0 18px rgba(223,249,0,.65)"></div>
+      <p style="margin:0 auto 44px;text-align:center;max-width:560px;font:600 16px/1.5 'Manrope',sans-serif;color:#eafce0;text-shadow:0 2px 12px rgba(0,40,20,.4)">Tudo o que você precisa para nunca ficar offline, com benefícios inclusos em todos os planos.</p>
+
+      <!-- Robô segurando os cards (fixo, respirando, piscando) -->
+      <div class="sc-print-hide" style="position:absolute;left:-128px;top:150px;width:clamp(150px,15vw,200px);z-index:1;pointer-events:none;transform-origin:bottom right;filter:drop-shadow(0 16px 26px rgba(0,40,15,.4));animation:scBreath 3.6s ease-in-out infinite">
+        <img src="assets/robo-segurando.png" alt="" aria-hidden="true" style="display:block;width:100%;height:auto"/>
+        <span style="position:absolute;left:34.5%;top:33%;width:13%;height:10%;background:#eef1f3;border-radius:50%;transform-origin:center;transform:scaleY(0);box-shadow:0 1px 2px rgba(0,0,0,.25);animation:scBlink 4s ease-in-out infinite"></span>
+        <span style="position:absolute;left:44.5%;top:28.5%;width:10.5%;height:8%;background:#eef1f3;border-radius:50%;transform-origin:center;transform:scaleY(0);box-shadow:0 1px 2px rgba(0,0,0,.25);animation:scBlink 4s ease-in-out infinite"></span>
+      </div>
+
+      <div style="position:relative;z-index:2;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px;align-items:stretch">
+        <sc-for list="{{ plans }}" as="plan" hint-placeholder-count="3">
+          <div style="position:relative;border-radius:24px;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);box-shadow:0 24px 60px -24px rgba(0,40,20,.4),inset 0 0 0 1px rgba(255,255,255,.7);transition:transform .35s cubic-bezier(.16,1,.3,1),box-shadow .35s;overflow:hidden" style-hover="transform:translateY(-10px);box-shadow:0 44px 84px -28px rgba(0,50,20,.55),inset 0 0 0 2px #dff900,0 0 40px rgba(223,249,0,.5)">
+
+            <sc-if value="{{ plan.popular }}" hint-placeholder-val="{{ false }}">
+              <div style="position:absolute;inset:0;border-radius:24px;box-shadow:inset 0 0 0 2px #dff900,inset 0 0 34px rgba(223,249,0,.25);pointer-events:none;animation:scPulse 3.4s ease-in-out infinite"></div>
+            </sc-if>
+
+            <div style="position:relative;padding:28px 28px 30px">
+              <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;min-height:30px">
+                <span style="font:600 12px/1 'Space Grotesk',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#0b8a45">Fibra Óptica</span>
+                <sc-if value="{{ plan.popular }}" hint-placeholder-val="{{ false }}">
+                  <span style="display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:999px;background:#dff900;color:#06301c;font:700 11px/1 'Space Grotesk',sans-serif;letter-spacing:.08em;text-transform:uppercase;box-shadow:0 6px 18px rgba(223,249,0,.55)">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 2.9 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 7.1-1.01L12 2z"/></svg>Mais Popular
+                  </span>
+                </sc-if>
+              </div>
+
+              <div style="display:flex;align-items:baseline;gap:8px;margin-top:14px">
+                <span style="font:700 clamp(38px,5vw,52px)/1 'Space Grotesk',sans-serif;color:#06301c;letter-spacing:-.02em">{{ plan.speed }}</span>
+                <span style="display:inline-block;width:40px;height:40px;animation:scFloatIcon 3s ease-in-out infinite"><svg width="40" height="40" viewBox="0 0 24 24" fill="#dff900" stroke="#06301c" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></span>
+              </div>
+
+              <div style="margin-top:20px;display:flex;align-items:baseline;gap:10px">
+                <span style="font:500 17px/1 'Manrope',sans-serif;color:#9aa9a1;text-decoration:line-through">{{ plan.old }}</span>
+                <span style="font:700 12px/1 'Space Grotesk',sans-serif;color:#06301c;padding:4px 8px;border-radius:7px;background:#dff900">-{{ plan.off }}</span>
+              </div>
+              <div style="display:flex;align-items:flex-end;gap:4px;margin-top:4px">
+                <span style="font:600 22px/1.4 'Space Grotesk',sans-serif;color:#0b8a45">R$</span>
+                <span style="font:700 clamp(52px,7vw,64px)/.9 'Space Grotesk',sans-serif;color:#06301c;letter-spacing:-.03em">{{ plan.reais }}</span>
+                <span style="font:700 26px/1 'Space Grotesk',sans-serif;color:#06301c">,{{ plan.cents }}</span>
+                <span style="font:600 15px/1 'Manrope',sans-serif;color:#6a8074;margin-left:2px;padding-bottom:6px">/mês</span>
+              </div>
+
+              <div style="margin-top:16px;display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border-radius:12px;background:rgba(6,48,28,.06);color:#2a4638;font:600 13px/1.2 'Manrope',sans-serif">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0b8a45" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg>
+                Pagando até a data de vencimento
+              </div>
+
+              <div style="height:1px;margin:24px 0 22px;background:linear-gradient(90deg,transparent,rgba(6,48,28,.14),transparent)"></div>
+
+              <p style="margin:0 0 16px;font:700 12px/1 'Space Grotesk',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#0b8a45">Tudo incluso</p>
+              <dc-import name="BonusList" hint-size="100%,320px"></dc-import>
+
+              <a href="{{ plan.wa }}" target="_blank" rel="noopener" style="margin-top:26px;width:100%;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:16px;border-radius:999px;background:#dff900;color:#06301c;font:800 15px/1 'Space Grotesk',sans-serif;letter-spacing:.01em;box-shadow:0 12px 26px -6px rgba(223,249,0,.6);transition:transform .25s,box-shadow .25s" style-hover="transform:translateY(-2px);box-shadow:0 18px 40px -8px rgba(223,249,0,.85);color:#06301c" style-active="transform:translateY(0);color:#06301c">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.06L2 22l5.06-1.33A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-3 .79.8-2.92-.2-.31A8.2 8.2 0 1 1 12 20.2zm4.71-6.1c-.26-.13-1.53-.75-1.76-.84-.24-.09-.41-.13-.58.13-.17.26-.67.83-.82 1-.15.17-.3.19-.56.06-.26-.13-1.09-.4-2.08-1.28-.77-.68-1.29-1.53-1.44-1.79-.15-.26-.02-.4.11-.53.12-.12.26-.3.39-.46.13-.15.17-.26.26-.44.09-.17.04-.33-.02-.46-.07-.13-.58-1.4-.8-1.92-.21-.5-.42-.43-.58-.44h-.5c-.17 0-.44.06-.67.31-.23.26-.88.86-.88 2.1 0 1.24.9 2.43 1.03 2.6.13.17 1.78 2.72 4.32 3.81.6.26 1.07.42 1.44.53.6.19 1.16.16 1.59.1.49-.07 1.53-.62 1.74-1.23.22-.6.22-1.12.15-1.23-.06-.11-.24-.17-.5-.3z"/></svg>
+                Contratar Agora
+              </a>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 2: BÁSICOS CORPORATIVOS -->
+    <section style="margin-top:112px;position:relative;border-radius:30px;overflow:hidden;background:linear-gradient(150deg,#063a22 0%,#052d1a 60%,#04231400 100%),linear-gradient(150deg,#063a22,#04231a);box-shadow:0 40px 90px -40px rgba(0,40,20,.7);animation:scFadeUp .8s cubic-bezier(.16,1,.3,1) both .1s">
+      <div style="position:absolute;top:-80px;right:-60px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(223,249,0,.2),transparent 70%);pointer-events:none"></div>
+      <div style="position:relative;padding:52px clamp(24px,4vw,56px)">
+        <div style="text-align:center;margin-bottom:6px">
+          <span style="font:700 12.5px/1 'Space Grotesk',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#dff900">Seção 02</span>
+        </div>
+        <h2 style="margin:0 0 14px;text-align:center;font:700 clamp(32px,4.6vw,52px)/1.04 'Space Grotesk',sans-serif;color:#ffffff;letter-spacing:-.02em">Planos Premium Corporativos</h2>
+        <div style="width:78px;height:5px;border-radius:3px;background:#dff900;margin:0 auto 18px;box-shadow:0 0 18px rgba(223,249,0,.65)"></div>
+        <p style="margin:0 auto 40px;text-align:center;max-width:560px;font:500 16px/1.5 'Manrope',sans-serif;color:#c8e6cf">Planos com <span style="color:#dff900;font-weight:700">1 AP de Teto</span> e <span style="color:#dff900;font-weight:700">1 RB</span> inclusos.</p>
+
+        <a href="{{ waEspecial }}" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:center;text-align:center;max-width:760px;margin:0 auto 34px;padding:16px 24px;border-radius:16px;text-decoration:none;background:rgba(223,249,0,.1);box-shadow:inset 0 0 0 1px rgba(223,249,0,.45);transition:transform .25s,box-shadow .25s" style-hover="transform:translateY(-2px);box-shadow:inset 0 0 0 1px rgba(223,249,0,.8),0 0 26px -4px rgba(223,249,0,.4)">
+          <span style="flex:none;width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:rgba(223,249,0,.16);box-shadow:inset 0 0 0 1px rgba(223,249,0,.4)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#dff900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" x2="4" y1="22" y2="15"/></svg>
+          </span>
+          <span style="font:600 15px/1.5 'Manrope',sans-serif;color:#eafce0;text-wrap:pretty">Deseja contratar <strong style="color:#dff900;font-weight:800">Link Dedicado</strong> e <strong style="color:#dff900;font-weight:800">Lan to Lan</strong>? Converse com nosso consultor comercial <strong style="color:#fff;font-weight:800">Eduardo</strong> para verificar orçamento.</span>
+        </a>
+
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <sc-for list="{{ corporate }}" as="c" hint-placeholder-count="3">
+            <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding:22px 26px;border-radius:18px;background:rgba(255,255,255,.05);box-shadow:inset 0 0 0 1px rgba(255,255,255,.1);transition:transform .3s,box-shadow .3s,background .3s" style-hover="transform:translateX(6px);background:rgba(223,249,0,.08);box-shadow:inset 0 0 0 1px rgba(223,249,0,.6),0 0 26px -4px rgba(223,249,0,.4)">
+              <div style="flex:none;width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:rgba(223,249,0,.14);box-shadow:inset 0 0 0 1px rgba(223,249,0,.35)">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#dff900" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13a10 10 0 0 1 14 0"/><path d="M8.5 16.5a5 5 0 0 1 7 0"/><path d="M2 8.82a15 15 0 0 1 20 0"/><line x1="12" x2="12.01" y1="20" y2="20"/></svg>
+              </div>
+              <div style="display:flex;align-items:baseline;gap:9px;min-width:150px">
+                <span style="font:700 30px/1 'Space Grotesk',sans-serif;color:#ffffff;letter-spacing:-.01em">{{ c.speed }}</span>
+                <span style="display:inline-block;width:30px;height:30px;animation:scFloatIcon 3s ease-in-out infinite"><svg width="30" height="30" viewBox="0 0 24 24" fill="#dff900" stroke="#06301c" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></span>
+              </div>
+              <div style="flex:1;min-width:120px;font:500 14px/1.4 'Manrope',sans-serif;color:#a9c9b3">Ideal para escritórios e ambientes corporativos.</div>
+              <div style="display:flex;align-items:baseline;gap:4px;margin-left:auto">
+                <span style="font:600 16px/1 'Space Grotesk',sans-serif;color:#dff900">R$</span>
+                <span style="font:700 34px/1 'Space Grotesk',sans-serif;color:#dff900;letter-spacing:-.02em">{{ c.price }}</span>
+                <span style="font:600 14px/1 'Manrope',sans-serif;color:#a9c9b3;padding-bottom:2px">/mês</span>
+              </div>
+              <a href="{{ c.wa }}" target="_blank" rel="noopener" style="flex:none;text-decoration:none;display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:999px;background:#dff900;color:#06301c;font:800 14px/1 'Space Grotesk',sans-serif;box-shadow:0 10px 22px -6px rgba(223,249,0,.5);transition:transform .25s" style-hover="transform:translateY(-2px);color:#06301c">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.06L2 22l5.06-1.33A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-3 .79.8-2.92-.2-.31A8.2 8.2 0 1 1 12 20.2zm4.71-6.1c-.26-.13-1.53-.75-1.76-.84-.24-.09-.41-.13-.58.13-.17.26-.67.83-.82 1-.15.17-.3.19-.56.06-.26-.13-1.09-.4-2.08-1.28-.77-.68-1.29-1.53-1.44-1.79-.15-.26-.02-.4.11-.53.12-.12.26-.3.39-.46.13-.15.17-.26.26-.44.09-.17.04-.33-.02-.46-.07-.13-.58-1.4-.8-1.92-.21-.5-.42-.43-.58-.44h-.5c-.17 0-.44.06-.67.31-.23.26-.88.86-.88 2.1 0 1.24.9 2.43 1.03 2.6.13.17 1.78 2.72 4.32 3.81.6.26 1.07.42 1.44.53.6.19 1.16.16 1.59.1.49-.07 1.53-.62 1.74-1.23.22-.6.22-1.12.15-1.23-.06-.11-.24-.17-.5-.3z"/></svg>
+                Contratar Agora
+              </a>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 3: PODER DA CONEXÃO -->
+    <section style="margin-top:112px;animation:scFadeUp .8s cubic-bezier(.16,1,.3,1) both .08s">
+      <div style="text-align:center;padding:16px 24px;border-radius:16px;background:#dff900;box-shadow:0 18px 40px -16px rgba(223,249,0,.6);font:800 clamp(14px,2vw,20px)/1.25 'Space Grotesk',sans-serif;letter-spacing:.02em;text-transform:uppercase;color:#06301c">Muito mais que internet: Internet + TV + Telefonia + Câmeras</div>
+
+      <div style="margin-top:26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:26px;align-items:stretch">
+        <div style="display:flex;flex-direction:column;justify-content:center;padding:clamp(28px,3vw,44px);border-radius:24px;background:linear-gradient(150deg,#063a22,#052d1a);box-shadow:0 30px 70px -34px rgba(0,40,20,.7),inset 0 0 0 1px rgba(223,249,0,.14)">
+          <span style="font:700 12.5px/1 'Space Grotesk',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#dff900">Seção 03</span>
+          <h2 style="margin:12px 0 14px;font:700 clamp(30px,4.2vw,48px)/1.04 'Space Grotesk',sans-serif;color:#fff;letter-spacing:-.02em;text-wrap:pretty">O Poder da Nossa Conexão</h2>
+          <div style="width:78px;height:5px;border-radius:3px;background:#dff900;margin:0 0 18px;box-shadow:0 0 18px rgba(223,249,0,.65)"></div>
+          <p style="margin:0 0 18px;font:500 16px/1.65 'Manrope',sans-serif;color:#cfe6d8;text-wrap:pretty">Contamos com um <strong style="color:#dff900">CPD (Centro de Processamento de Dados) próprio</strong>, links redundantes e monitoramento 24/7. Nossa infraestrutura de fibra óptica é dimensionada para entregar estabilidade real, baixa latência e velocidade que não cai nos horários de pico.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:12px">
+            <div style="flex:1;min-width:120px;padding:14px 16px;border-radius:14px;background:rgba(255,255,255,.05);box-shadow:inset 0 0 0 1px rgba(223,249,0,.2)"><div style="font:700 26px/1 'Space Grotesk',sans-serif;color:#dff900">24/7</div><div style="margin-top:4px;font:500 12.5px/1.3 'Manrope',sans-serif;color:#a9c9b3">Monitoramento ativo</div></div>
+            <div style="flex:1;min-width:120px;padding:14px 16px;border-radius:14px;background:rgba(255,255,255,.05);box-shadow:inset 0 0 0 1px rgba(223,249,0,.2)"><div style="font:700 26px/1 'Space Grotesk',sans-serif;color:#dff900">Links</div><div style="margin-top:4px;font:500 12.5px/1.3 'Manrope',sans-serif;color:#a9c9b3">Redundantes</div></div>
+            <div style="flex:1;min-width:120px;padding:14px 16px;border-radius:14px;background:rgba(255,255,255,.05);box-shadow:inset 0 0 0 1px rgba(223,249,0,.2)"><div style="font:700 26px/1 'Space Grotesk',sans-serif;color:#dff900">Baixa</div><div style="margin-top:4px;font:500 12.5px/1.3 'Manrope',sans-serif;color:#a9c9b3">Latência</div></div>
+          </div>
+        </div>
+        <div style="position:relative;min-height:320px;border-radius:24px;overflow:hidden;box-shadow:inset 0 0 0 2px rgba(223,249,0,.4),0 30px 70px -34px rgba(0,40,20,.7)">
+          <img src="assets/datacenter.jpg" alt="Data Center Super Connect" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"/>
+          <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,28,15,0) 45%,rgba(4,28,15,.88))"></div>
+          <div style="position:absolute;left:22px;bottom:20px;display:inline-flex;align-items:center;gap:9px;padding:9px 16px;border-radius:999px;background:rgba(4,28,15,.7);box-shadow:inset 0 0 0 1px rgba(223,249,0,.4)">
+            <span style="width:8px;height:8px;border-radius:50%;background:#dff900;box-shadow:0 0 10px #dff900"></span>
+            <span style="font:700 13px/1 'Space Grotesk',sans-serif;letter-spacing:.04em;color:#fff">Nosso CPD · Data Center</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 4: VITRINE DE EQUIPAMENTOS -->
+    <section style="margin-top:112px;animation:scFadeUp .8s cubic-bezier(.16,1,.3,1) both .08s">
+      <div style="text-align:center;margin-bottom:12px">
+        <span style="font:700 12.5px/1 'Space Grotesk',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#dff900;text-shadow:0 1px 8px rgba(0,40,20,.5)">Seção 04</span>
+      </div>
+      <h2 style="margin:0 0 14px;text-align:center;font:700 clamp(34px,5vw,56px)/1.03 'Space Grotesk',sans-serif;color:#fff;letter-spacing:-.02em;text-shadow:0 3px 18px rgba(0,40,20,.45)">Tecnologia de Ponta</h2>
+      <div style="width:78px;height:5px;border-radius:3px;background:#dff900;margin:0 auto 18px;box-shadow:0 0 18px rgba(223,249,0,.65)"></div>
+      <p style="margin:0 auto 40px;text-align:center;max-width:560px;font:600 16px/1.5 'Manrope',sans-serif;color:#eafce0;text-shadow:0 2px 12px rgba(0,40,20,.4)">Equipamentos de última geração inclusos e instalados por nossa equipe.</p>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px">
+        <div style="display:flex;flex-direction:column;border-radius:22px;background:rgba(255,255,255,.94);box-shadow:0 24px 56px -26px rgba(0,40,20,.45),inset 0 0 0 1px rgba(255,255,255,.7);overflow:hidden;transition:transform .3s,box-shadow .3s" style-hover="transform:translateY(-8px);box-shadow:0 40px 80px -30px rgba(0,50,20,.55),inset 0 0 0 2px #dff900">
+          <div style="height:190px;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:16px;background:#fff"><img src="assets/prod-roteador.png" alt="Roteador 5 Antenas Wi-Fi 6" style="max-width:86%;max-height:148px;object-fit:contain;mix-blend-mode:multiply"/></div>
+          <div style="padding:20px 22px 24px">
+            <div style="font:700 12px/1 'Space Grotesk',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#0b8a45">Wi-Fi 6</div>
+            <h3 style="margin:8px 0 6px;font:700 19px/1.2 'Space Grotesk',sans-serif;color:#06301c">Roteador 5 Antenas</h3>
+            <p style="margin:0;font:500 14px/1.5 'Manrope',sans-serif;color:#4a6656">Alcance extremo e estabilidade em toda a casa.</p>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;border-radius:22px;background:rgba(255,255,255,.94);box-shadow:0 24px 56px -26px rgba(0,40,20,.45),inset 0 0 0 1px rgba(255,255,255,.7);overflow:hidden;transition:transform .3s,box-shadow .3s" style-hover="transform:translateY(-8px);box-shadow:0 40px 80px -30px rgba(0,50,20,.55),inset 0 0 0 2px #dff900">
+          <div style="height:190px;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:16px;background:#fff"><img src="assets/prod-apteto.png" alt="AP de Teto" style="max-width:86%;max-height:148px;object-fit:contain;mix-blend-mode:multiply"/></div>
+          <div style="padding:20px 22px 24px">
+            <div style="font:700 12px/1 'Space Grotesk',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#0b8a45">Corporativo</div>
+            <h3 style="margin:8px 0 6px;font:700 19px/1.2 'Space Grotesk',sans-serif;color:#06301c">AP de Teto</h3>
+            <p style="margin:0;font:500 14px/1.5 'Manrope',sans-serif;color:#4a6656">Cobertura corporativa sem pontos cegos.</p>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;border-radius:22px;background:rgba(255,255,255,.94);box-shadow:0 24px 56px -26px rgba(0,40,20,.45),inset 0 0 0 1px rgba(255,255,255,.7);overflow:hidden;transition:transform .3s,box-shadow .3s" style-hover="transform:translateY(-8px);box-shadow:0 40px 80px -30px rgba(0,50,20,.55),inset 0 0 0 2px #dff900">
+          <div style="height:190px;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:16px;background:#fff"><img src="assets/prod-rb.png" alt="RB RouterBoard" style="max-width:86%;max-height:148px;object-fit:contain;mix-blend-mode:multiply"/></div>
+          <div style="padding:20px 22px 24px">
+            <div style="font:700 12px/1 'Space Grotesk',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#0b8a45">RouterBoard</div>
+            <h3 style="margin:8px 0 6px;font:700 19px/1.2 'Space Grotesk',sans-serif;color:#06301c">RB — Gestão de Rede</h3>
+            <p style="margin:0;font:500 14px/1.5 'Manrope',sans-serif;color:#4a6656">Gestão de rede de alta performance.</p>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;border-radius:22px;background:rgba(255,255,255,.94);box-shadow:0 24px 56px -26px rgba(0,40,20,.45),inset 0 0 0 1px rgba(255,255,255,.7);overflow:hidden;transition:transform .3s,box-shadow .3s" style-hover="transform:translateY(-8px);box-shadow:0 40px 80px -30px rgba(0,50,20,.55),inset 0 0 0 2px #dff900">
+          <div style="height:190px;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:16px;background:#fff"><img src="assets/prod-camera.png" alt="SuperCam" style="max-width:86%;max-height:148px;object-fit:contain;mix-blend-mode:multiply"/></div>
+          <div style="padding:20px 22px 24px">
+            <div style="font:700 12px/1 'Space Grotesk',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#0b8a45">Segurança</div>
+            <h3 style="margin:8px 0 6px;font:700 19px/1.2 'Space Grotesk',sans-serif;color:#06301c">SuperCam</h3>
+            <p style="margin:0;font:500 14px/1.5 'Manrope',sans-serif;color:#4a6656">Monitoramento inteligente em alta definição.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 5: TELEFONIA MÓVEL TÁ ON -->
+    <section style="margin-top:112px;animation:scFadeUp .8s cubic-bezier(.16,1,.3,1) both .08s">
+      <div style="text-align:center;margin-bottom:10px">
+        <img src="assets/prod-chip.png" alt="Chip Super Connect 4G" style="display:inline-block;height:clamp(190px,22vw,290px);width:auto;filter:drop-shadow(0 0 24px rgba(223,249,0,.6)) drop-shadow(0 26px 36px rgba(0,25,12,.55));animation:scFloatChip 5s ease-in-out infinite"/>
+      </div>
+      <div style="text-align:center;margin-bottom:12px">
+        <span style="font:700 12.5px/1 'Space Grotesk',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#dff900;text-shadow:0 1px 8px rgba(0,40,20,.5)">Seção 05 · Planos Tá On</span>
+      </div>
+      <h2 style="margin:0 0 14px;text-align:center;font:700 clamp(30px,4.4vw,50px)/1.04 'Space Grotesk',sans-serif;color:#fff;letter-spacing:-.02em;text-shadow:0 3px 18px rgba(0,40,20,.45);text-wrap:pretty">Conexão que vai com você para todo lugar</h2>
+      <div style="width:78px;height:5px;border-radius:3px;background:#dff900;margin:0 auto 18px;box-shadow:0 0 18px rgba(223,249,0,.65)"></div>
+      <p style="margin:0 auto 20px;text-align:center;max-width:600px;font:600 16px/1.5 'Manrope',sans-serif;color:#eafce0;text-shadow:0 2px 12px rgba(0,40,20,.4)">Cobertura nacional com aplicativos que não descontam da sua franquia.</p>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:0 auto 36px;max-width:640px">
+        <span style="padding:8px 14px;border-radius:999px;background:rgba(223,249,0,.16);box-shadow:inset 0 0 0 1px rgba(223,249,0,.4);font:700 12.5px/1 'Manrope',sans-serif;color:#dff900">✓ WhatsApp Grátis</span>
+        <span style="padding:8px 14px;border-radius:999px;background:rgba(223,249,0,.16);box-shadow:inset 0 0 0 1px rgba(223,249,0,.4);font:700 12.5px/1 'Manrope',sans-serif;color:#dff900">✓ Skeelo</span>
+        <span style="padding:8px 14px;border-radius:999px;background:rgba(223,249,0,.16);box-shadow:inset 0 0 0 1px rgba(223,249,0,.4);font:700 12.5px/1 'Manrope',sans-serif;color:#dff900">✓ Waze</span>
+        <span style="padding:8px 14px;border-radius:999px;background:rgba(223,249,0,.16);box-shadow:inset 0 0 0 1px rgba(223,249,0,.4);font:700 12.5px/1 'Manrope',sans-serif;color:#dff900">✓ Uber Free</span>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:20px;align-items:stretch">
+        <sc-for list="{{ mobile }}" as="m" hint-placeholder-count="7">
+          <div style="position:relative;display:flex;flex-direction:column;border-radius:22px;padding:24px 22px;background:rgba(255,255,255,.09);backdrop-filter:blur(12px);box-shadow:inset 0 0 0 1px rgba(255,255,255,.14),0 24px 56px -30px rgba(0,40,20,.6);transition:transform .3s,box-shadow .3s" style-hover="transform:translateY(-8px);box-shadow:inset 0 0 0 1px rgba(223,249,0,.5),0 34px 70px -30px rgba(0,50,20,.7)">
+            <sc-if value="{{ m.best }}" hint-placeholder-val="{{ false }}">
+              <div style="position:absolute;inset:-2px;border-radius:24px;pointer-events:none;animation:scGlow 2.6s ease-in-out infinite"></div>
+              <div style="position:absolute;z-index:2;top:-13px;left:50%;transform:translateX(-50%);white-space:nowrap;padding:6px 14px;border-radius:999px;background:#dff900;color:#06301c;font:800 10.5px/1 'Space Grotesk',sans-serif;letter-spacing:.06em;text-transform:uppercase;box-shadow:0 8px 20px rgba(223,249,0,.6)">★ Melhor Custo Benefício</div>
+            </sc-if>
+            <div style="position:relative;z-index:1">
+              <div style="display:flex;align-items:baseline;gap:6px">
+                <span style="font:700 clamp(34px,4vw,44px)/1 'Space Grotesk',sans-serif;color:#fff;letter-spacing:-.02em">{{ m.gb }}</span>
+                <span style="font:700 18px/1 'Space Grotesk',sans-serif;color:#dff900">GB</span>
+              </div>
+              <div style="display:flex;align-items:baseline;gap:3px;margin-top:12px">
+                <span style="font:600 15px/1 'Space Grotesk',sans-serif;color:#dff900">R$</span>
+                <span style="font:700 30px/1 'Space Grotesk',sans-serif;color:#dff900;letter-spacing:-.02em">{{ m.price }}</span>
+                <span style="font:600 13px/1 'Manrope',sans-serif;color:#a9c9b3">/mês</span>
+              </div>
+              <sc-if value="{{ m.calls }}" hint-placeholder-val="{{ false }}">
+                <div style="margin-top:14px;display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:999px;background:rgba(223,249,0,.16);box-shadow:inset 0 0 0 1px rgba(223,249,0,.4);font:700 12px/1 'Manrope',sans-serif;color:#dff900">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  Chamadas Ilimitadas
+                </div>
+              </sc-if>
+              <div style="margin-top:16px;display:flex;flex-wrap:wrap;gap:6px">
+                <span style="padding:5px 9px;border-radius:8px;background:rgba(255,255,255,.08);font:600 10.5px/1 'Manrope',sans-serif;color:#cfe6d8">WhatsApp</span>
+                <span style="padding:5px 9px;border-radius:8px;background:rgba(255,255,255,.08);font:600 10.5px/1 'Manrope',sans-serif;color:#cfe6d8">Skeelo</span>
+                <span style="padding:5px 9px;border-radius:8px;background:rgba(255,255,255,.08);font:600 10.5px/1 'Manrope',sans-serif;color:#cfe6d8">Waze</span>
+                <span style="padding:5px 9px;border-radius:8px;background:rgba(255,255,255,.08);font:600 10.5px/1 'Manrope',sans-serif;color:#cfe6d8">Uber</span>
+              </div>
+              <a href="{{ m.wa }}" target="_blank" rel="noopener" style="margin-top:20px;width:100%;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px;border-radius:999px;background:#dff900;color:#06301c;font:800 13.5px/1 'Space Grotesk',sans-serif;box-shadow:0 12px 26px -8px rgba(223,249,0,.6);transition:transform .25s" style-hover="transform:translateY(-2px);color:#06301c">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.06L2 22l5.06-1.33A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-3 .79.8-2.92-.2-.31A8.2 8.2 0 1 1 12 20.2zm4.71-6.1c-.26-.13-1.53-.75-1.76-.84-.24-.09-.41-.13-.58.13-.17.26-.67.83-.82 1-.15.17-.3.19-.56.06-.26-.13-1.09-.4-2.08-1.28-.77-.68-1.29-1.53-1.44-1.79-.15-.26-.02-.4.11-.53.12-.12.26-.3.39-.46.13-.15.17-.26.26-.44.09-.17.04-.33-.02-.46-.07-.13-.58-1.4-.8-1.92-.21-.5-.42-.43-.58-.44h-.5c-.17 0-.44.06-.67.31-.23.26-.88.86-.88 2.1 0 1.24.9 2.43 1.03 2.6.13.17 1.78 2.72 4.32 3.81.6.26 1.07.42 1.44.53.6.19 1.16.16 1.59.1.49-.07 1.53-.62 1.74-1.23.22-.6.22-1.12.15-1.23-.06-.11-.24-.17-.5-.3z"/></svg>
+                Quero este plano
+              </a>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 6: TURBINE SEU PLANO -->
+    <section style="margin-top:112px;animation:scFadeUp .8s cubic-bezier(.16,1,.3,1) both .08s">
+      <div style="position:relative;overflow:hidden;border-radius:30px;padding:clamp(28px,3.4vw,48px);background:#dff900;box-shadow:0 40px 90px -40px rgba(223,249,0,.7)">
+        <div style="text-align:center;margin-bottom:8px"><span style="font:700 12.5px/1 'Space Grotesk',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#06301c">Seção 06 · Upsell</span></div>
+        <h2 style="margin:0 0 14px;text-align:center;font:700 clamp(34px,5vw,56px)/1.03 'Space Grotesk',sans-serif;color:#06301c;letter-spacing:-.02em">Turbine Seu Plano</h2>
+        <div style="width:78px;height:5px;border-radius:3px;background:#06301c;margin:0 auto 26px"></div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px">
+          <div style="position:relative;display:flex;flex-direction:column;border-radius:22px;overflow:hidden;background:#fff;box-shadow:0 24px 56px -26px rgba(0,40,20,.4)">
+            <div style="height:214px;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:20px;position:relative;background:linear-gradient(160deg,#eef7ec,#dcefda)">
+              <img src="assets/prod-tv.png" alt="TV" style="max-width:82%;max-height:172px;object-fit:contain;mix-blend-mode:multiply"/>
+              <img src="assets/prod-roku.png" alt="Roku" style="position:absolute;bottom:16px;right:16px;width:27%;object-fit:contain;mix-blend-mode:multiply;filter:drop-shadow(0 6px 12px rgba(0,0,0,.15))"/>
+            </div>
+            <div style="padding:22px 24px 26px">
+              <div style="font:700 12px/1 'Space Grotesk',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#0b8a45">TV + Streaming</div>
+              <h3 style="margin:8px 0 8px;font:700 26px/1.12 'Space Grotesk',sans-serif;color:#06301c;letter-spacing:-.01em">Transforme sua sala!</h3>
+              <p style="margin:0 0 18px;font:500 15px/1.55 'Manrope',sans-serif;color:#4a6656">Grade completa de Canais de TV por apenas <strong style="color:#06301c">+ R$ 30,00/mês</strong>.</p>
+              <a href="{{ waTV }}" target="_blank" rel="noopener" style="width:100%;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:15px;border-radius:999px;background:#06301c;color:#dff900;font:800 14.5px/1 'Space Grotesk',sans-serif;box-shadow:0 12px 26px -8px rgba(6,48,28,.5);transition:transform .25s" style-hover="transform:translateY(-2px);color:#dff900">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.06L2 22l5.06-1.33A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-3 .79.8-2.92-.2-.31A8.2 8.2 0 1 1 12 20.2zm4.71-6.1c-.26-.13-1.53-.75-1.76-.84-.24-.09-.41-.13-.58.13-.17.26-.67.83-.82 1-.15.17-.3.19-.56.06-.26-.13-1.09-.4-2.08-1.28-.77-.68-1.29-1.53-1.44-1.79-.15-.26-.02-.4.11-.53.12-.12.26-.3.39-.46.13-.15.17-.26.26-.44.09-.17.04-.33-.02-.46-.07-.13-.58-1.4-.8-1.92-.21-.5-.42-.43-.58-.44h-.5c-.17 0-.44.06-.67.31-.23.26-.88.86-.88 2.1 0 1.24.9 2.43 1.03 2.6.13.17 1.78 2.72 4.32 3.81.6.26 1.07.42 1.44.53.6.19 1.16.16 1.59.1.49-.07 1.53-.62 1.74-1.23.22-.6.22-1.12.15-1.23-.06-.11-.24-.17-.5-.3z"/></svg>
+                Quero adicionar TV
+              </a>
+            </div>
+          </div>
+
+          <div style="position:relative;display:flex;flex-direction:column;border-radius:22px;overflow:hidden;background:#fff;box-shadow:0 24px 56px -26px rgba(0,40,20,.4)">
+            <div style="height:214px;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:20px;background:linear-gradient(160deg,#eef7ec,#dcefda)"><img src="assets/prod-camera.png" alt="SuperCam" style="max-width:82%;max-height:172px;object-fit:contain;mix-blend-mode:multiply"/></div>
+            <div style="padding:22px 24px 26px">
+              <div style="font:700 12px/1 'Space Grotesk',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#0b8a45">Segurança 24h</div>
+              <h3 style="margin:8px 0 8px;font:700 26px/1.12 'Space Grotesk',sans-serif;color:#06301c;letter-spacing:-.01em">Proteja o que importa.</h3>
+              <p style="margin:0 0 18px;font:500 15px/1.55 'Manrope',sans-serif;color:#4a6656">SuperCam com monitoramento 24h por apenas <strong style="color:#06301c">+ R$ 40,00/mês</strong>.</p>
+              <a href="{{ waCam }}" target="_blank" rel="noopener" style="width:100%;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:15px;border-radius:999px;background:#06301c;color:#dff900;font:800 14.5px/1 'Space Grotesk',sans-serif;box-shadow:0 12px 26px -8px rgba(6,48,28,.5);transition:transform .25s" style-hover="transform:translateY(-2px);color:#dff900">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.06L2 22l5.06-1.33A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-3 .79.8-2.92-.2-.31A8.2 8.2 0 1 1 12 20.2zm4.71-6.1c-.26-.13-1.53-.75-1.76-.84-.24-.09-.41-.13-.58.13-.17.26-.67.83-.82 1-.15.17-.3.19-.56.06-.26-.13-1.09-.4-2.08-1.28-.77-.68-1.29-1.53-1.44-1.79-.15-.26-.02-.4.11-.53.12-.12.26-.3.39-.46.13-.15.17-.26.26-.44.09-.17.04-.33-.02-.46-.07-.13-.58-1.4-.8-1.92-.21-.5-.42-.43-.58-.44h-.5c-.17 0-.44.06-.67.31-.23.26-.88.86-.88 2.1 0 1.24.9 2.43 1.03 2.6.13.17 1.78 2.72 4.32 3.81.6.26 1.07.42 1.44.53.6.19 1.16.16 1.59.1.49-.07 1.53-.62 1.74-1.23.22-.6.22-1.12.15-1.23-.06-.11-.24-.17-.5-.3z"/></svg>
+                Quero adicionar Câmera
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:22px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:center;text-align:center;padding:20px 26px;border-radius:18px;background:#06301c;box-shadow:0 20px 44px -18px rgba(6,48,28,.6)">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#dff900" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="m13 2-3 7h6l-3 7"/><circle cx="12" cy="12" r="10" opacity=".35"/></svg>
+          <p style="margin:0;font:800 clamp(15px,2vw,19px)/1.35 'Space Grotesk',sans-serif;color:#fff;text-wrap:pretty">Condição especial: incluindo TV ou Câmera hoje, a <span style="background:#dff900;color:#06301c;padding:2px 10px;border-radius:8px">INSTALAÇÃO É 100% GRÁTIS!</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO: CONSULTOR EDUARDO + QR -->
+    <section style="margin-top:96px;animation:scFadeUp .8s cubic-bezier(.16,1,.3,1) both .08s">
+      <div style="position:relative;overflow:hidden;border-radius:30px;background:linear-gradient(135deg,#063a22 0%,#052d1a 60%,#04231a 100%);box-shadow:0 40px 90px -40px rgba(0,40,20,.7),inset 0 0 0 1px rgba(223,249,0,.16)">
+        <div style="position:absolute;top:-90px;left:-40px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(223,249,0,.16),transparent 70%);pointer-events:none"></div>
+
+        <div style="position:relative;z-index:2;display:flex;flex-wrap:wrap;align-items:stretch;gap:clamp(20px,3vw,44px);padding:clamp(28px,3.4vw,48px)">
+
+          <!-- Eduardo -->
+          <div style="flex:0 1 300px;min-width:230px;position:relative;display:flex;justify-content:center;align-items:flex-end">
+            <div style="position:absolute;bottom:60px;left:50%;transform:translateX(-50%);width:min(280px,86%);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(223,249,0,.32),rgba(223,249,0,0) 66%);pointer-events:none"></div>
+            <img src="assets/eduardo.png" alt="Eduardo — Consultor Comercial" style="position:relative;z-index:1;display:block;width:auto;max-width:100%;height:clamp(250px,30vw,340px);object-fit:contain;object-position:bottom;filter:drop-shadow(0 24px 30px rgba(0,0,0,.45))"/>
+            <div style="position:absolute;z-index:2;bottom:14px;left:50%;transform:translateX(-50%) rotate(-2deg);padding:11px 24px;border-radius:12px;background:linear-gradient(120deg,#0a4d2b,#063a22);box-shadow:0 14px 30px -10px rgba(0,0,0,.55);text-align:center;white-space:nowrap">
+              <div style="font:600 11px/1 'Space Grotesk',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#dff900">Consultor Comercial</div>
+              <div style="margin-top:3px;font:700 26px/1 'Space Grotesk',sans-serif;color:#fff">Eduardo</div>
+            </div>
+          </div>
+
+          <!-- Contato central -->
+          <div style="flex:1;min-width:260px;display:flex;flex-direction:column;justify-content:center;gap:14px">
+            <span style="font:700 12px/1 'Space Grotesk',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#dff900">Atendimento rápido</span>
+            <h2 style="margin:0;font:700 clamp(26px,3.4vw,38px)/1.05 'Space Grotesk',sans-serif;color:#fff;letter-spacing:-.01em;text-wrap:pretty">Entre em contato agora!</h2>
+            <p style="margin:0;font:500 15px/1.5 'Manrope',sans-serif;color:#cfe6d8;text-wrap:pretty">Escaneie o QR Code ou fale com nosso atendimento pelo WhatsApp — atendimento humano e sem enrolação.</p>
+            <a href="{{ waGeneric }}" target="_blank" rel="noopener" style="margin-top:6px;display:inline-flex;align-items:center;gap:14px;text-decoration:none;padding:12px 14px 12px 12px;border-radius:999px;background:#dff900;box-shadow:0 16px 34px -10px rgba(223,249,0,.7);transition:transform .25s,box-shadow .25s;align-self:flex-start" style-hover="transform:translateY(-2px);box-shadow:0 22px 46px -10px rgba(223,249,0,.9)">
+              <span style="flex:none;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:#06301c">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#dff900"><path d="M12 2a10 10 0 0 0-8.6 15.06L2 22l5.06-1.33A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-3 .79.8-2.92-.2-.31A8.2 8.2 0 1 1 12 20.2zm4.71-6.1c-.26-.13-1.53-.75-1.76-.84-.24-.09-.41-.13-.58.13-.17.26-.67.83-.82 1-.15.17-.3.19-.56.06-.26-.13-1.09-.4-2.08-1.28-.77-.68-1.29-1.53-1.44-1.79-.15-.26-.02-.4.11-.53.12-.12.26-.3.39-.46.13-.15.17-.26.26-.44.09-.17.04-.33-.02-.46-.07-.13-.58-1.4-.8-1.92-.21-.5-.42-.43-.58-.44h-.5c-.17 0-.44.06-.67.31-.23.26-.88.86-.88 2.1 0 1.24.9 2.43 1.03 2.6.13.17 1.78 2.72 4.32 3.81.6.26 1.07.42 1.44.53.6.19 1.16.16 1.59.1.49-.07 1.53-.62 1.74-1.23.22-.6.22-1.12.15-1.23-.06-.11-.24-.17-.5-.3z"/></svg>
+              </span>
+              <span style="display:flex;flex-direction:column;line-height:1.1;padding-right:10px">
+                <span style="font:700 11px/1.3 'Manrope',sans-serif;color:#06301c;letter-spacing:.06em;text-transform:uppercase;opacity:.8">WhatsApp</span>
+                <span style="font:700 clamp(22px,2.8vw,30px)/1.05 'Space Grotesk',sans-serif;color:#06301c">(82) 92000-4834</span>
+              </span>
+            </a>
+            <p style="margin:2px 0 0;font:500 13px/1.4 'Manrope',sans-serif;color:#a9c9b3">www.provedorsuperconnect.com.br</p>
+          </div>
+
+          <!-- QR -->
+          <div style="flex:0 0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;min-width:180px">
+            <div style="position:relative;padding:14px;border-radius:20px;background:#fff;box-shadow:inset 0 0 0 3px #dff900,0 16px 34px -12px rgba(0,0,0,.5)">
+              <img src="assets/qrcode.png" alt="QR Code Super Connect" style="display:block;width:clamp(150px,15vw,180px);height:auto;border-radius:10px"/>
+            </div>
+            <div style="text-align:center;font:700 15px/1.1 'Space Grotesk',sans-serif;color:#fff">Vem ser um <span style="color:#dff900">Super Conectado!</span></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER / AVISO -->
+    <section style="margin-top:34px;animation:scFadeUp .8s cubic-bezier(.16,1,.3,1) both .08s">
+      <div style="position:relative;overflow:hidden;border-radius:22px;padding:26px 30px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;background:#dff900;box-shadow:0 24px 50px -20px rgba(223,249,0,.6)">
+        <div style="position:absolute;top:0;left:0;width:60px;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent);animation:scSheen 4.5s ease-in-out infinite;pointer-events:none"></div>
+        <div style="flex:none;width:56px;height:56px;border-radius:16px;display:grid;place-items:center;background:#06301c">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#dff900" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.46 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" x2="12" y1="9" y2="13"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg>
+        </div>
+        <div style="position:relative;flex:1;min-width:260px">
+          <p style="margin:0 0 4px;font:700 12px/1 'Space Grotesk',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#06301c">Observação importante</p>
+          <p style="margin:0;font:700 clamp(15px,1.9vw,18px)/1.45 'Manrope',sans-serif;color:#06301c;text-wrap:pretty">A cada AP de Teto e RB adicionado, haverá um acréscimo de <span style="background:#06301c;color:#dff900;padding:2px 9px;border-radius:8px;font-weight:800">R$ 100,00</span> no valor do plano.</p>
+        </div>
+      </div>
+      <p style="margin:26px 0 0;text-align:center;font:600 13px/1.5 'Manrope',sans-serif;color:#eafce0;text-shadow:0 2px 10px rgba(0,40,20,.4)">Super Connect · Proposta comercial sujeita a análise de viabilidade técnica.</p>
+    </section>
+
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;popularPlan&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;400MB&quot;,&quot;600MB&quot;,&quot;1G&quot;],&quot;default&quot;:&quot;600MB&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Planos&quot;}}">
+class Component extends DCLogic {
+  wa(msg) {
+    return 'https://wa.me/5582920004834?text=' + encodeURIComponent(msg);
+  }
+  renderVals() {
+    const popular = this.props.popularPlan ?? '600MB';
+    const plans = [
+      { speed: '400MB', old: 'R$ 168,75', off: '20%', reais: '135', cents: '00',
+        wa: this.wa('Olá! Gostaria de contratar o Plano Premium de 400MB por R$ 135,00 com Instalação Grátis.') },
+      { speed: '600MB', old: 'R$ 256,25', off: '20%', reais: '205', cents: '00',
+        wa: this.wa('Olá! Gostaria de contratar o Plano Premium de 600MB por R$ 205,00 com Instalação Grátis.') },
+      { speed: '1G', old: 'R$ 318,75', off: '20%', reais: '255', cents: '00',
+        wa: this.wa('Olá! Gostaria de contratar o Plano Premium de 1 GIGA por R$ 255,00 com Instalação Grátis.') },
+    ].map(p => ({ ...p, popular: p.speed === popular }));
+    const corporate = [
+      { speed: '400MB', price: '300,00',
+        wa: this.wa('Olá! Gostaria de contratar o Plano Corporativo de 400MB por R$ 300,00/mês, com 1 AP de Teto e 1 RB inclusos.') },
+      { speed: '600MB', price: '400,00',
+        wa: this.wa('Olá! Gostaria de contratar o Plano Corporativo de 600MB por R$ 400,00/mês, com 1 AP de Teto e 1 RB inclusos.') },
+      { speed: '1G', price: '500,00',
+        wa: this.wa('Olá! Gostaria de contratar o Plano Corporativo de 1 GIGA por R$ 500,00/mês, com 1 AP de Teto e 1 RB inclusos.') },
+    ];
+    const waEspecial = this.wa('Olá, Eduardo! Gostaria de um orçamento para Link Dedicado e Lan to Lan da Super Connect.');
+    const waGeneric = this.wa('Olá! Gostaria de mais informações sobre os planos da Super Connect.');
+    const waEduardo = this.wa('Olá, Eduardo! Vim pela proposta da Super Connect e gostaria de falar com um consultor sobre os planos.');
+    const mobile = [
+      { gb: '07', price: '35,90', calls: false, best: false },
+      { gb: '11', price: '40,90', calls: true,  best: false },
+      { gb: '16', price: '50,99', calls: true,  best: false },
+      { gb: '23', price: '63,99', calls: true,  best: false },
+      { gb: '33', price: '79,99', calls: true,  best: true  },
+      { gb: '41', price: '89,99', calls: true,  best: false },
+      { gb: '50', price: '94,99', calls: true,  best: false },
+    ].map(m => ({ ...m, wa: this.wa('Quero o Plano Tá On ' + m.gb + 'GB por R$ ' + m.price + '/mês da Super Connect.') }));
+    const waTV = this.wa('Quero adicionar o pacote de TV (grade completa de canais) por + R$ 30,00/mês ao meu plano Super Connect.');
+    const waCam = this.wa('Quero adicionar a SuperCam (monitoramento 24h) por + R$ 40,00/mês ao meu plano Super Connect.');
+    return { plans, corporate, waGeneric, waEduardo, waEspecial, mobile, waTV, waCam };
+  }
+}
+</script>
+<script>
+(async () => {
+  if (!document.title || !document.title.trim()) document.title = "Proposta Super Connect";
+  // rAF raced with a short timeout: inside a cross-origin iframe (PrintMode),
+  // rAF can be throttled or paused even while the tab is focused, which would
+  // hang the scroll loop and never reach print(). Same pattern as
+  // buildExportSettleScript (export/shared.ts).
+  var raf = function () {
+    return Promise.race([
+      new Promise(function (r) { requestAnimationFrame(r); }),
+      new Promise(function (r) { setTimeout(r, 50); }),
+    ]);
+  };
+  var t0 = performance.now();
+  var mark = function (phase) {
+    var ms = Math.round(performance.now() - t0);
+    console.info('[autoprint]', phase, ms + 'ms');
+    try { parent.postMessage({ __omelette_autoprint: { phase: phase, ms: ms } }, '*'); } catch (e) {}
+  };
+  mark('start');
+  // Prepend so page-supplied @page / break rules (deck-stage's margin:0,
+  // author CSS) keep source-order precedence over the baseline.
+  const baseCss = document.createElement('style');
+  baseCss.textContent = "@media print {\n  figure, table { break-inside: avoid; }\n  *, *::before, *::after {\n    print-color-adjust: exact; -webkit-print-color-adjust: exact;\n    backdrop-filter: none !important; -webkit-backdrop-filter: none !important;\n    animation-delay: -99s !important; animation-duration: .001s !important;\n    animation-iteration-count: 1 !important; animation-fill-mode: both !important;\n    animation-play-state: running !important; transition-duration: 0s !important;\n  }\n}";
+  document.head.prepend(baseCss);
+  if (document.readyState === 'loading') {
+    await new Promise((r) => document.addEventListener('DOMContentLoaded', r, { once: true }));
+  }
+  let ds = document.querySelector('deck-stage');
+  // whenDefined never resolves when nothing registers the element, so only
+  // await it when a <deck-stage> tag exists (and race a timeout regardless).
+  if (ds && !customElements.get('deck-stage')) {
+    try {
+      await Promise.race([
+        customElements.whenDefined('deck-stage'),
+        new Promise((r) => setTimeout(r, 3000)),
+      ]);
+    } catch (e) {}
+    ds = document.querySelector('deck-stage');
+  }
+  // dc-runtime assigns window.DCLogic at init and mounts into #dc-root on
+  // DOMContentLoaded; settle on that subtree so React has rendered before
+  // print(). Non-DC pages fall through to weighing body.
+  const isDc = !ds && 'DCLogic' in window;
+  const settleRoot = ds || (isDc ? document.getElementById('dc-root') : null) || document.body;
+  if (settleRoot) {
+    // Weigh only content children — skip script/style/template so inline
+    // Babel/CSS doesn't register as stable "content" before the framework
+    // has mounted anything.
+    const MEDIA = 'img,svg,canvas,video,picture,iframe,embed,object';
+    const weigh = () => {
+      let text = 0, media = 0;
+      for (const c of settleRoot.children) {
+        const t = c.tagName;
+        if (t === 'SCRIPT' || t === 'STYLE' || t === 'TEMPLATE') continue;
+        text += (c.textContent || '').trim().length;
+        media += c.querySelectorAll(MEDIA).length + (c.matches(MEDIA) ? 1 : 0);
+      }
+      return text + media * 100;
+    };
+    // "Non-zero and stable" alone is not sufficient to mean rendered: generic
+    // body can carry a static shell while async main content is pending, and
+    // #dc-root can carry the root DC's static text while child refs are still
+    // .sc-placeholder boxes. Gate generic on readyState 'complete', and never
+    // accept stability while a dc-runtime placeholder is present.
+    const isGeneric = settleRoot === document.body;
+    // A placeholder whose fetch failed (.sc-placeholder-error inside) keeps
+    // .sc-placeholder forever — don't wait on it. JS loop, not :has(), so an
+    // engine without :has() support can't throw out of the while and skip
+    // print() entirely.
+    var pendingPlaceholders = function () {
+      var all = settleRoot.querySelectorAll('.sc-placeholder'), n = 0;
+      for (var i = 0; i < all.length; i++)
+        if (!all[i].querySelector('.sc-placeholder-error')) n++;
+      return n;
+    };
+    const deadline = Date.now() + 15000;
+    let last = -1, stable = 0;
+    while (Date.now() < deadline) {
+      const n = weigh();
+      const ready =
+        (!isGeneric || document.readyState === 'complete') &&
+        pendingPlaceholders() === 0;
+      if (n > 0 && n === last && ready) { if (++stable >= 2) break; } else { stable = 0; }
+      last = n;
+      await new Promise((r) => setTimeout(r, 250));
+    }
+  }
+  mark('settle-done' + (settleRoot ? ' (errs=' + settleRoot.querySelectorAll('.sc-placeholder-error').length + ' pending=' + pendingPlaceholders() + ')' : ''));
+  // Project support.js may predate runtime default-seeding; push via bridge.
+  if (isDc && window.__dcSetProps && window.__dcRootName) {
+    try {
+      const dpEl = document.querySelector('script[data-dc-script]');
+      const meta = JSON.parse((dpEl && dpEl.getAttribute('data-props')) || '{}');
+      const bag = {};
+      for (const k in meta)
+        if (k[0] !== '$' && meta[k] && meta[k].default !== undefined)
+          bag[k] = meta[k].default;
+      if (Object.keys(bag).length) {
+        window.__dcSetProps(window.__dcRootName(), bag);
+        await new Promise((r) => setTimeout(r, 50));
+      }
+    } catch (e) {}
+  }
+  // Reveal content gated on scroll or visibility before printing. Lazy <img>,
+  // IntersectionObserver fade-ins, and collapsed <details> don't render while
+  // off-screen, so a long page would print with them blank or closed. Open
+  // every <details>, force native-lazy images eager, and scroll the document
+  // through its full height to trip lazy-load + IO; then wait (bounded) for the
+  // newly-triggered images. Inert for deck-stage (slides aren't scroll-gated).
+  try {
+    for (const d of document.querySelectorAll('details')) d.open = true;
+    for (const img of document.querySelectorAll('img[loading="lazy"]'))
+      img.loading = 'eager';
+    const scroller = document.scrollingElement || document.documentElement;
+    const full = Math.max(scroller.scrollHeight, document.body.scrollHeight);
+    const step = window.innerHeight || 800;
+    var scrollDeadline = Date.now() + 4000;
+    for (let y = 0; y <= full && Date.now() < scrollDeadline; y += step) {
+      window.scrollTo(0, y);
+      await raf();
+    }
+    window.scrollTo(0, 0);
+    await Promise.race([
+      Promise.all(
+        [...document.images].map((img) =>
+          img.complete
+            ? null
+            : new Promise((res) => {
+                img.addEventListener('load', res, { once: true });
+                img.addEventListener('error', res, { once: true });
+              })
+        )
+      ),
+      new Promise((r) => setTimeout(r, 4000)),
+    ]);
+  } catch (e) {}
+  mark('scroll-done');
+  try { await Promise.race([document.fonts.ready, new Promise((r) => setTimeout(r, 3000))]); } catch (e) {}
+  mark('fonts-done');
+  // Jump every animation to its end state so print() never captures a slide
+  // mid-entrance. Ordering matters: the 0s-transition style must be live
+  // BEFORE data-deck-active is set so attribute-keyed transitions don't
+  // start a (now-0s) run from the pre-active base.
+  const st = document.createElement('style');
+  st.textContent = '*,*::before,*::after{animation-delay:-99s !important;animation-duration:.001s !important;animation-iteration-count:1 !important;animation-fill-mode:both !important;animation-play-state:running !important;transition-duration:0s !important}';
+  document.head.appendChild(st);
+  for (const d of document.querySelectorAll('deck-stage')) {
+    for (const c of d.children) {
+      const t = c.tagName;
+      if (t === 'SCRIPT' || t === 'STYLE' || t === 'TEMPLATE') continue;
+      c.setAttribute('data-deck-active', '');
+    }
+  }
+  // Re-append deck-stage's @page last so no author @page can add a margin and
+  // spill each full-bleed slide onto two sheets. Backstop for old copies.
+  if (ds) {
+    let pg = document.getElementById('deck-stage-print-page');
+    if (!pg) {
+      pg = document.createElement('style');
+      pg.textContent = '@page{size:' + (+ds.getAttribute('width') || 1920) +
+        'px ' + (+ds.getAttribute('height') || 1080) + 'px;margin:0}';
+    }
+    document.body.appendChild(pg);
+  }
+  try {
+    const sweep = () => {
+      for (const a of document.getAnimations()) {
+        try { a.finish(); } catch (e) {
+          try { a.currentTime = (a.effect && a.effect.getComputedTiming().duration) || 0; a.pause(); } catch (e2) {}
+        }
+      }
+    };
+    sweep();
+    await raf();
+    sweep();
+    await raf();
+  } catch (e) {}
+  // A document that owns its print CSS (the doc-page starter injects the
+  // meta at runtime; hand-rolled print designs author it) gets no automatic
+  // page geometry and keeps its forced breaks: strip the injected default
+  // @page — write time cannot see a runtime-injected meta — skip the frame
+  // override below, and skip the fakepage-flattening further down. What
+  // still applies: the print baseline and break-hygiene defaults (no @page
+  // in either; low specificity, so the document's own print CSS wins) and
+  // the break-inside relaxation on >page elements (avoid on those cannot
+  // be honored whoever authored it).
+  var ownsPrint = !!document.querySelector('meta[name="omelette-owns-print" i]');
+  if (ownsPrint) {
+    var dst = document.querySelector('style[data-omelette-print-defaults]');
+    if (dst && dst.textContent) {
+      dst.textContent = dst.textContent.replace(/@page\b[^{}]*\{[^}]*\}/, '');
+    }
+  }
+  // Size the PDF page to the rendered design unless the file opted into
+  // standard paper via @page{size:letter|A4|…} or declared print ownership
+  // via the meta above. Decks own their own @page.
+  // Wrappers (body, …) lose padding+margin so the frame sits at (0,0); the
+  // frame itself loses only margin — its padding is INSIDE the measured
+  // rect and must stay, or content shifts and leaves a gap at bottom/right.
+  var __m = null;
+  try { __m = (() => {
+  var STAMP = true;
+  var docEl = document.documentElement;
+  var doc = { width: docEl.scrollWidth, height: docEl.scrollHeight };
+  // Name-presence check, case-insensitive — the same contract as the
+  // instant-PDF path's runtime check in deck-stage-export.ts. The name is
+  // a string literal here because that file interpolates this script into
+  // its print script, so importing a shared constant from it would be a
+  // cycle; measure.test.ts pins the literal so the two cannot drift apart
+  // silently.
+  var ownsPrint = !!document.querySelector('meta[name="omelette-owns-print" i]');
+
+  var ds = document.querySelector('deck-stage');
+  if (ds) {
+    var dw = Number(ds.getAttribute('width')) || 1920;
+    var dh = Number(ds.getAttribute('height')) || 1080;
+    var n = typeof ds.length === 'number' ? ds.length : ds.children.length;
+    var idx = typeof ds.index === 'number' ? ds.index : 0;
+    var frames = [];
+    for (var i = 0; i < n; i++) frames.push({ left: 0, top: 0, width: dw, height: dh });
+    return { kind: 'deck', source: 'declared', doc: doc, frames: frames,
+      authored: frames.map(function(){return{width:true,height:true}}),
+      deck: { width: dw, height: dh, slideCount: n, index: idx },
+      signals: { paperPage: false, pxPage: false, ownsPrint: ownsPrint } };
+  }
+
+  // Declared kind: a doc-page tag names the kind outright, so no signal
+  // heuristics run (like the deck branch above, signals report false —
+  // they describe inferred classifications only). The tag alone is not
+  // trusted: the element must have upgraded (shadowRoot present), so a
+  // leftover tag whose script was deleted falls through to the heuristics
+  // that handle plain markup.
+  var stageSx = window.scrollX || 0, stageSy = window.scrollY || 0;
+  var dp = document.querySelector('doc-page');
+  if (dp && dp.shadowRoot) {
+    // Crop to the sheet, not the host — the desk around it is screen-only
+    // chrome that must not land in PNG exports.
+    var sheet = dp.shadowRoot.querySelector('.sheet');
+    var sr = (sheet || dp).getBoundingClientRect();
+    return { kind: 'paper-doc', source: 'declared', doc: doc,
+      frames: [{ left: sr.left + stageSx, top: sr.top + stageSy,
+        width: sr.width, height: sr.height }],
+      authored: [{ width: false, height: false }],
+      signals: { paperPage: false, pxPage: false, ownsPrint: ownsPrint } };
+  }
+  var paperPage = false, pxPage = false;
+  var eachRule = function (fn) {
+    for (var s = 0; s < document.styleSheets.length; s++) {
+      var rs; try { rs = document.styleSheets[s].cssRules; } catch (e) { continue; }
+      for (var r = 0; r < rs.length; r++) {
+        fn(rs[r]);
+        if (rs[r].cssRules) for (var n = 0; n < rs[r].cssRules.length; n++) fn(rs[r].cssRules[n]);
+      }
+    }
+  };
+  eachRule(function (r) {
+    if (r.type !== 6) return;
+    var m = /\bsize\s*:\s*([^;}]+)/i.exec(r.cssText || '');
+    if (!m) return;
+    if (/\b(letter|a[3-5]|legal|ledger)\b/i.test(m[1])) paperPage = true;
+    if (/\d+(?:\.\d+)?px\b/i.test(m[1])) pxPage = true;
+  });
+  var signals = { paperPage: paperPage, pxPage: pxPage, ownsPrint: ownsPrint };
+
+  var pxVal = function (v) {
+    var m = /^(\d+(?:\.\d+)?)px$/.exec(v || ''); return m ? +m[1] : 0;
+  };
+  var authoredPx = function (el, prop) {
+    if (pxVal(el.style[prop])) return true;
+    var attr = el.getAttribute(prop);
+    if (attr && /^\d+$/.test(attr)) return true;
+    var hit = false;
+    eachRule(function (r) {
+      if (hit || r.type !== 1 || !r.style) return;
+      try { if (el.matches(r.selectorText) && pxVal(r.style[prop])) hit = true; } catch (e) {}
+    });
+    return hit;
+  };
+
+  var el = document.body, rootPxW = false;
+  for (;;) {
+    var kids = [];
+    for (var c = 0; c < el.children.length; c++) {
+      var t = el.children[c].tagName;
+      if (t !== 'SCRIPT' && t !== 'STYLE' && t !== 'TEMPLATE') kids.push(el.children[c]);
+    }
+    if (kids.length !== 1 || !(kids[0] instanceof HTMLElement)) break;
+    if (STAMP) el.setAttribute('data-om-frame-wrap', '');
+    el = kids[0];
+    rootPxW = authoredPx(el, 'width');
+    if (rootPxW) break;
+  }
+  if (!rootPxW) rootPxW = authoredPx(el, 'width');
+
+  // @page{size:letter} alone is a flowing doc; with a px-width root it's a
+  // fixed sheet pretending to be paper — fall through and size to render.
+  if (paperPage && !rootPxW) {
+    return { kind: 'paper-doc', source: 'inferred', doc: doc, signals: signals,
+      frames: [{ left: 0, top: 0, width: doc.width, height: doc.height }],
+      authored: [{ width: false, height: false }] };
+  }
+
+  var sx = window.scrollX || 0, sy = window.scrollY || 0;
+  var rectOf = function (e) {
+    var r = e.getBoundingClientRect();
+    var oy; try { oy = getComputedStyle(e).overflowY; } catch (err) {}
+    var h = oy === 'visible' ? Math.max(r.height, e.scrollHeight || 0) : r.height;
+    return { left: r.left + sx, top: r.top + sy, width: r.width, height: h };
+  };
+
+  // Multi-frame: off unless the page opts in via data-om-multi-frame on the
+  // stop element — the explicit opt-in is what guards against card grids
+  // and pricing tables that match the geometry but aren't separate
+  // canvases. Two ways to name the frames, explicit first:
+  // 1. Descendants marked data-om-frame-export (the social-frames starter
+  //    marks each asset frame; shells/panels around them are presentation,
+  //    so nesting is expected). Document order.
+  // 2. Fallback, no marked descendants: direct children with an authored px
+  //    width AND height (the original geometry heuristic).
+  // Frames may be different sizes (a gallery mixes 1080×1920 stories with
+  // 728×90 banners); data-om-frame-label rides along for export filenames.
+  if (el.hasAttribute('data-om-multi-frame')) {
+    var visOk = function (e) {
+      var cs; try { cs = getComputedStyle(e); } catch (err) { return false; }
+      return cs.display !== 'none' && cs.visibility !== 'hidden' && cs.position !== 'fixed';
+    };
+    // A frame's crop is its VISUAL box — never the scrollHeight-inflated
+    // rect that rectOf computes for page roots. Shadow-DOM hover controls
+    // (image-slot's Replace bar parks 29px below its host) and similar
+    // escaping UI contribute scrollable overflow to the frame, and the
+    // inflated height both squashes the nominal-size resize and drags
+    // content below the frame into the crop. Zoom-independent; bit every
+    // slot-bearing frame.
+    var frameRectOf = function (e) {
+      var r = e.getBoundingClientRect();
+      return { left: r.left + sx, top: r.top + sy, width: r.width, height: r.height };
+    };
+    var pushCand = function (list, e) {
+      if (!visOk(e)) return;
+      var rc = frameRectOf(e);
+      if (rc.width < 2 || rc.height < 2) return;
+      var lbl = e.getAttribute('data-om-frame-label');
+      if (lbl) rc.label = lbl;
+      list.push(rc);
+    };
+    var cands = [];
+    var marked = el.querySelectorAll('[data-om-frame-export]');
+    if (marked.length) {
+      for (var mk = 0; mk < marked.length; mk++) pushCand(cands, marked[mk]);
+    } else {
+      for (var k = 0; k < el.children.length; k++) {
+        var ch = el.children[k];
+        if (!authoredPx(ch, 'width') || !authoredPx(ch, 'height')) continue;
+        pushCand(cands, ch);
+      }
+    }
+    if (cands.length >= 2) {
+      return { kind: 'multi-frame', source: 'inferred', doc: doc, signals: signals,
+        frames: cands, authored: cands.map(function(){return{width:true,height:true}}) };
+    }
+  }
+
+  if (STAMP) el.setAttribute('data-om-frame', '');
+  return { kind: 'single-canvas', source: 'inferred', doc: doc, signals: signals,
+    frames: [rectOf(el)],
+    authored: [{ width: rootPxW, height: authoredPx(el, 'height') }] };
+})(); } catch (e) {}
+  var frame = null;
+  if (!ownsPrint && __m && __m.kind === 'single-canvas') {
+    var f = __m.frames && __m.frames[0];
+    if (f && f.width >= 200 && f.height >= 200) {
+      frame = f;
+      var fst = document.createElement('style');
+      fst.textContent = '@media print{@page{size:' + Math.ceil(f.width) + 'px ' +
+        Math.ceil(f.height) + 'px;margin:0}' +
+        'html,body,[data-om-frame-wrap]{padding:0!important;margin:0!important;background:none!important}' +
+        '[data-om-frame]{margin:0!important}}';
+      document.body.appendChild(fst);
+    }
+  }
+  // Relax break-inside on oversized elements. An element taller than a
+  // printable page can't honor break-inside: avoid — browsers either overflow
+  // it or push it whole to the next page, leaving a blank gap, then break it
+  // anyway at an arbitrary point. After the final layout (content revealed,
+  // animations jumped), find elements taller than a page that still compute
+  // break-inside: avoid and reset them to auto, so the browser breaks them at
+  // their children's boundaries instead (children keep their own avoid). PAGE_PX
+  // is a conservative portrait estimate at 96 CSS px/in — Letter/A4 usable
+  // height minus our 0.5in margins — so only clearly-oversized elements are
+  // touched and under-page elements still stay whole. Skipped for decks (slides
+  // are sized to the page) and for fixed-size canvases (frame set, or an author
+  // px-based @page) — runs as before for flowing docs on letter/A4.
+  try {
+    if (!ds && !frame && !(__m && __m.signals && __m.signals.pxPage)) {
+      const PAGE_PX = 1024;
+      // Our print defaults add a real @page margin only when the source has
+      // no @page of its own; computed style can't tell us (it reports screen
+      // media), so read the injected rule directly.
+      const defaults = document.querySelector('style[data-omelette-print-defaults]');
+      const pageInset = /@page\s*\{[^}]*margin/.test(defaults ? defaults.textContent || '' : '');
+      const SEL = 'section,article,figure,table,pre,blockquote,[class~="card" i],[class~="page" i],[class~="sheet" i]';
+      for (const el of document.body.querySelectorAll(SEL)) {
+        if (el instanceof HTMLElement && el.offsetHeight > PAGE_PX) {
+          el.setAttribute('data-om-oversized', '');
+          // Fake-paged docs simulate sheets with over-tall break-after:page
+          // boxes; honoring the break spills half-blank pages and ends a
+          // colored box mid-sheet. Flow them, and (only when we own the page
+          // inset) drop the redundant padding/background via the rule below.
+          const cs = getComputedStyle(el);
+          // An owns-print doc's forced breaks are intentional sheet
+          // boundaries, never fake-paged simulation — don't strip them.
+          // The break-inside relaxation above still applies: avoid on a
+          // >page element is impossible to honor whoever authored it.
+          if (
+            !ownsPrint &&
+            (cs.breakAfter === 'page' || cs.pageBreakAfter === 'always')
+          ) {
+            el.setAttribute('data-om-fakepage', '');
+          }
+        }
+      }
+      const ost = document.createElement('style');
+      ost.textContent = '@media print{' +
+        '[data-om-oversized]{break-inside:auto !important;page-break-inside:auto !important}' +
+        '[data-om-fakepage]{break-after:auto !important;page-break-after:auto !important}' +
+        (pageInset ? '[data-om-fakepage]{padding:0 !important;background:none !important}' : '') +
+        '}';
+      document.head.appendChild(ost);
+    }
+  } catch (e) {}
+  // macOS Preview renders Skia-PDF Luminosity soft-masks as opaque grey boxes;
+  // swap the CSS that triggers them for Preview-safe forms.
+  try {
+    for (const el of document.body.querySelectorAll('*')) {
+      const cs = getComputedStyle(el);
+
+      if (cs.boxShadow !== 'none' && cs.filter === 'none') {
+        const outs = [], kept = [];
+        for (const s of cs.boxShadow.split(/,(?![^(]*[)])/)) {
+          const t = s.trim();
+          const m = t.match(/^(rgba?[(][^)]+[)]) (-?[0-9.]+px) (-?[0-9.]+px) ([0-9.]+px) -?[0-9.]+px$/);
+          if (m && parseFloat(m[4]) > 0) outs.push('drop-shadow(' + m[2] + ' ' + m[3] + ' ' + m[4] + ' ' + m[1] + ')');
+          else kept.push(t);
+        }
+        if (outs.length) {
+          el.style.setProperty('filter', outs.join(' '), 'important');
+          el.style.setProperty('box-shadow', kept.join(', ') || 'none', 'important');
+        }
+      }
+
+      const mask = cs.maskImage && cs.maskImage !== 'none' ? cs.maskImage : cs.webkitMaskImage;
+      if (mask && mask !== 'none' && cs.filter === 'none') el.style.setProperty('filter', 'opacity(1)', 'important');
+    }
+  } catch (e) {}
+  mark('print-calling');
+  setTimeout(() => { try { window.print(); } catch (e) {} }, 200);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Super Connect × Carajás Home Center — Apresentação Comercial</title>
+<meta name="description" content="Super Connect × Carajás Home Center: soluções corporativas de conectividade, Link Dedicado, LAN to LAN e infraestrutura de telecomunicações.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  html,body{margin:0}
+  body{background:#2fae18;font-family:'Manrope',system-ui,sans-serif;color:#06301c;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:#06301c;text-decoration:none}
+  a:hover{color:#04160d}
+  @keyframes scFadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+  @keyframes scPulse{0%,100%{opacity:.55;transform:scale(1)}50%{opacity:1;transform:scale(1.015)}}
+  @keyframes scSheen{0%{transform:translateX(-120%)}60%,100%{transform:translateX(320%)}}
+  @keyframes scFloatIcon{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+  @keyframes scGlow{0%,100%{box-shadow:0 0 0 2px #dff900,0 0 22px rgba(223,249,0,.5)}50%{box-shadow:0 0 0 2px #dff900,0 0 40px rgba(223,249,0,.85)}}
+  @keyframes scFly{
+    0%{transform:translateX(-32vw) translateY(0);opacity:0}
+    8%{opacity:1}
+    50%{transform:translateX(44vw) translateY(-12px)}
+    92%{opacity:1}
+    100%{transform:translateX(126vw) translateY(0);opacity:0}
+  }
+  details>summary::-webkit-details-marker{display:none}
+  details[open] .acc-plus{transform:rotate(45deg)}
+  .acc-plus{transition:transform .25s}
+
+  /* Cards verdes (padrão do site original) */
+  .sc-card-green{border-radius:24px;background:linear-gradient(150deg,#063a22,#052d1a);box-shadow:0 30px 70px -34px rgba(0,40,20,.7),inset 0 0 0 1px rgba(223,249,0,.2);transition:transform .32s cubic-bezier(.16,1,.3,1),box-shadow .32s ease,background .32s ease}
+  .sc-card-green:hover{transform:translateY(-8px);background:linear-gradient(150deg,#0a4429,#063a22);box-shadow:0 40px 80px -30px rgba(0,30,15,.7),inset 0 0 0 2px #dff900,0 0 36px -4px rgba(223,249,0,.45)}
+  .sc-card-dark{border-radius:22px;background:rgba(255,255,255,.06);box-shadow:inset 0 0 0 1px rgba(223,249,0,.2);transition:transform .3s ease,background .3s ease,box-shadow .3s ease}
+  .sc-card-dark:hover{transform:translateY(-5px);background:rgba(223,249,0,.09);box-shadow:inset 0 0 0 1px rgba(223,249,0,.6),0 18px 40px -16px rgba(0,0,0,.45)}
+  .sc-cta-btn{transition:transform .25s ease,box-shadow .25s ease}
+  .sc-cta-btn:hover{transform:translateY(-2px);box-shadow:0 22px 46px -10px rgba(223,249,0,.92)!important}
+
+  /* Linha arrastável (clientes e soluções) */
+  .sc-row-wrap{position:relative}
+  .sc-row-track{display:flex;align-items:stretch;gap:22px;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding:18px 4px 40px;cursor:grab;user-select:none;-webkit-user-select:none;outline:none}
+  .sc-row-track::-webkit-scrollbar{display:none}
+  .sc-row-track.is-dragging{cursor:grabbing}
+  .sc-row-track.is-dragging *{pointer-events:none}
+  .sc-row-track>*{flex:0 0 auto}
+  .sc-row-track>:first-child{margin-left:auto}
+  .sc-row-track>:last-child{margin-right:auto}
+  .sc-row-track:focus-visible{box-shadow:0 0 0 2px #dff900;border-radius:24px}
+  .sc-row-btn{position:absolute;top:50%;transform:translateY(-50%);z-index:5;width:46px;height:46px;border-radius:50%;border:0;padding:0;display:grid;place-items:center;cursor:pointer;background:rgba(4,30,16,.82);color:#dff900;box-shadow:inset 0 0 0 1px rgba(223,249,0,.5),0 12px 26px -12px rgba(0,0,0,.65);transition:transform .2s,background .2s,color .2s,opacity .2s}
+  .sc-row-btn:hover{background:#dff900;color:#06301c;transform:translateY(-50%) scale(1.06)}
+  .sc-row-btn:focus-visible{outline:2px solid #dff900;outline-offset:2px}
+  .sc-row-btn.is-hidden{opacity:0;pointer-events:none}
+  .sc-row-btn-prev{left:-10px}
+  .sc-row-btn-next{right:-10px}
+
+  /* Logos de clientes: sem caixa, centralizadas H/V, mínimo 3 visíveis por vez */
+  .sc-logo-slot{width:clamp(104px,27vw,324px);aspect-ratio:2.5/1;display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .sc-logo-slot img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;pointer-events:none;-webkit-user-drag:none;filter:brightness(0) invert(1) drop-shadow(0 12px 26px rgba(0,40,15,.5))}
+  .sc-carajas-logo{width:min(90%,910px);aspect-ratio:2.5/1;overflow:hidden;margin:0 auto}
+  .sc-carajas-logo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;filter:brightness(0) invert(1) drop-shadow(0 18px 40px rgba(0,0,0,.45))}
+  .sc-sol-card{width:min(380px,84vw)}
+
+  /* Linha com loop contínuo (repetida 3x e reposicionada ao rolar) */
+  .sc-inf-track{position:relative;display:flex;align-items:center;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding:24px 0 26px;cursor:grab;user-select:none;-webkit-user-select:none;outline:none;
+    mask-image:linear-gradient(to right,transparent,#000 56px,#000 calc(100% - 56px),transparent);
+    -webkit-mask-image:linear-gradient(to right,transparent,#000 56px,#000 calc(100% - 56px),transparent)}
+  .sc-inf-track::-webkit-scrollbar{display:none}
+  .sc-inf-track.is-dragging{cursor:grabbing}
+  .sc-inf-track.is-dragging *{pointer-events:none}
+  .sc-inf-track:focus-visible{box-shadow:0 0 0 2px #dff900;border-radius:24px}
+  .sc-inf-set{display:flex;align-items:center;gap:22px;flex:0 0 auto}
+  .sc-inf-set+.sc-inf-set{margin-left:22px}
+  .sc-inf-set>*{flex:0 0 auto}
+  .sc-inf-dots{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:4px}
+  .sc-inf-dot{width:10px;height:10px;padding:0;border:0;border-radius:999px;cursor:pointer;background:rgba(255,255,255,.35);transition:background .25s ease,transform .25s ease,box-shadow .25s ease}
+  .sc-inf-dot.is-active{background:#ffffff;transform:scale(1.18);box-shadow:0 0 12px rgba(255,255,255,.65)}
+  .sc-inf-dot:focus-visible{outline:2px solid #dff900;outline-offset:3px}
+  @media(max-width:640px){.sc-inf-set{gap:16px}.sc-inf-set+.sc-inf-set{margin-left:16px}}
+
+  @media print{
+    @page{ margin:12mm; }
+    *{ animation:none!important; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    .sc-root{ overflow:visible!important; min-height:0!important; background-attachment:scroll!important; }
+    .sc-print-hide{ display:none!important; }
+    section{ page-break-inside:avoid; }
+  }
+  @media(max-width:820px){
+    .sc-inst-grid{ grid-template-columns:1fr!important; }
+    .sc-gal{ grid-template-columns:repeat(2,1fr)!important; }
+    .sc-steps-grid{ grid-template-columns:1fr!important; }
+  }
+  @media(max-width:760px){
+    .sc-fly{ width:170px!important; top:24px!important; }
+  }
+  @media(max-width:640px){
+    .sc-wrap{ padding-left:16px!important; padding-right:16px!important; }
+    .sc-sec{ margin-top:68px!important; }
+    .sc-hero{ padding-top:44px!important; padding-bottom:54px!important; }
+    .sc-row-btn{ display:none; }
+  }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="module" src="/src/main.tsx"></script>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{font-family:'Manrope',system-ui,sans-serif}
+</style>
+</helmet>
+<x-import component-from-global-scope="deck-stage" from="./deck-stage.js" width="1920" height="1080" hint-size="100%,100%" data-uneditable="">
+
+  <!-- 1. CAPA -->
+  <section data-label="Capa" data-speaker-notes="" style="width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:90px;background:linear-gradient(rgba(20,120,10,.08),rgba(6,45,26,.35)),url('assets/fundo-ead.png');background-size:cover;background-position:center">
+    <span style="display:inline-flex;align-items:center;gap:12px;padding:12px 26px;border-radius:999px;background:rgba(4,30,16,.85);box-shadow:inset 0 0 0 1px rgba(223,249,0,.4);font:600 22px/1 'Space Grotesk',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#dff900">
+      <span style="width:12px;height:12px;border-radius:50%;background:#dff900;box-shadow:0 0 14px #dff900"></span>Proposta Comercial
+    </span>
+    <img src="assets/super-logo-main.png" alt="Super Connect" style="width:760px;max-width:70%;height:auto;margin:56px 0 0;filter:drop-shadow(0 20px 40px rgba(0,40,15,.4))">
+    <div style="margin-top:44px;padding:16px 40px;border-radius:999px;background:#dff900;box-shadow:0 18px 40px -10px rgba(223,249,0,.6);font:700 26px/1 'Space Grotesk',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#06301c">Internet · TV · Telefonia · Câmeras</div>
+    <p style="margin:44px 0 0;max-width:1100px;font:500 34px/1.5 'Manrope',sans-serif;color:#fff;text-shadow:0 2px 16px rgba(0,40,20,.5)">As melhores soluções de conexão — <span style="color:#dff900;font-weight:800">fibra óptica de alta performance</span> para sua casa e sua empresa.</p>
+  </section>
+
+  <!-- 2. PLANOS PREMIUM -->
+  <section data-label="Planos Premium" data-speaker-notes="Três planos premium de fibra. 600MB é o mais popular. Todos com instalação grátis, Wi-Fi 6 e suporte prioritário." style="width:100%;height:100%;display:flex;flex-direction:column;padding:90px 100px;background:linear-gradient(160deg,#1f9d10,#0d6b0a)">
+    <div style="font:700 24px/1 'Space Grotesk',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#dff900">Seção 01</div>
+    <h2 style="margin:16px 0 10px;font:700 76px/1 'Space Grotesk',sans-serif;color:#fff;letter-spacing:-.02em">Planos Premium de Fibra</h2>
+    <div style="width:110px;height:7px;border-radius:4px;background:#dff900;box-shadow:0 0 20px rgba(223,249,0,.7)"></div>
+    <div style="flex:1;display:grid;grid-template-columns:repeat(3,1fr);gap:34px;margin-top:52px">
+      <div style="display:flex;flex-direction:column;border-radius:28px;background:#fff;padding:44px 40px;box-shadow:0 30px 60px -24px rgba(0,40,20,.5)">
+        <div style="font:600 22px/1 'Space Grotesk',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#0b8a45">Fibra Óptica</div>
+        <div style="margin-top:18px;font:700 72px/1 'Space Grotesk',sans-serif;color:#06301c">400MB</div>
+        <div style="margin-top:26px;font:500 28px/1 'Manrope',sans-serif;color:#9aa9a1;text-decoration:line-through">R$ 168,75</div>
+        <div style="margin-top:8px;font:700 92px/.9 'Space Grotesk',sans-serif;color:#06301c">R$ 135<span style="font-size:40px">,00</span></div>
+        <div style="margin-top:auto;padding-top:30px;font:600 24px/1.3 'Manrope',sans-serif;color:#2a4638">Pagando até a data de vencimento</div>
+      </div>
+      <div style="position:relative;display:flex;flex-direction:column;border-radius:28px;background:#fff;padding:44px 40px;box-shadow:0 40px 80px -24px rgba(0,50,20,.6),0 0 0 4px #dff900">
+        <div style="position:absolute;top:-24px;left:50%;transform:translateX(-50%);white-space:nowrap;padding:12px 28px;border-radius:999px;background:#dff900;color:#06301c;font:700 22px/1 'Space Grotesk',sans-serif;letter-spacing:.08em;text-transform:uppercase;box-shadow:0 10px 24px rgba(223,249,0,.6)">★ Mais Popular</div>
+        <div style="font:600 22px/1 'Space Grotesk',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#0b8a45">Fibra Óptica</div>
+        <div style="margin-top:18px;font:700 72px/1 'Space Grotesk',sans-serif;color:#06301c">600MB</div>
+        <div style="margin-top:26px;font:500 28px/1 'Manrope',sans-serif;color:#9aa9a1;text-decoration:line-through">R$ 256,25</div>
+        <div style="margin-top:8px;font:700 92px/.9 'Space Grotesk',sans-serif;color:#06301c">R$ 205<span style="font-size:40px">,00</span></div>
+        <div style="margin-top:auto;padding-top:30px;font:600 24px/1.3 'Manrope',sans-serif;color:#2a4638">Pagando até a data de vencimento</div>
+      </div>
+      <div style="display:flex;flex-direction:column;border-radius:28px;background:#fff;padding:44px 40px;box-shadow:0 30px 60px -24px rgba(0,40,20,.5)">
+        <div style="font:600 22px/1 'Space Grotesk',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#0b8a45">Fibra Óptica</div>
+        <div style="margin-top:18px;font:700 72px/1 'Space Grotesk',sans-serif;color:#06301c">1 GIGA</div>
+        <div style="margin-top:26px;font:500 28px/1 'Manrope',sans-serif;color:#9aa9a1;text-decoration:line-through">R$ 318,75</div>
+        <div style="margin-top:8px;font:700 92px/.9 'Space Grotesk',sans-serif;color:#06301c">R$ 255<span style="font-size:40px">,00</span></div>
+        <div style="margin-top:auto;padding-top:30px;font:600 24px/1.3 'Manrope',sans-serif;color:#2a4638">Pagando até a data de vencimento</div>
+      </div>
+    </div>
+    <div style="margin-top:36px;display:flex;flex-wrap:wrap;gap:14px">
+      <span style="padding:12px 22px;border-radius:999px;background:rgba(223,249,0,.18);box-shadow:inset 0 0 0 1px rgba(223,249,0,.5);font:700 22px/1 'Manrope',sans-serif;color:#dff900">✓ Instalação Grátis</span>
+      <span style="padding:12px 22px;border-radius:999px;background:rgba(223,249,0,.18);box-shadow:inset 0 0 0 1px rgba(223,249,0,.5);font:700 22px/1 'Manrope',sans-serif;color:#dff900">✓ Wi-Fi 6 · 4 Antenas</span>
+      <span style="padding:12px 22px;border-radius:999px;background:rgba(223,249,0,.18);box-shadow:inset 0 0 0 1px rgba(223,249,0,.5);font:700 22px/1 'Manrope',sans-serif;color:#dff900">✓ IP Fixo</span>
+      <span style="padding:12px 22px;border-radius:999px;background:rgba(223,249,0,.18);box-shadow:inset 0 0 0 1px rgba(223,249,0,.5);font:700 22px/1 'Manrope',sans-serif;color:#dff900">✓ Suporte Prioritário</span>
+    </div>
+  </section>
+
+  <!-- 3. PLANOS CORPORATIVOS -->
+  <section data-label="Corporativos" data-speaker-notes="Planos básicos corporativos, cada um com 1 AP de Teto e 1 RB inclusos. Acréscimo de R$100 por AP/RB adicional." style="width:100%;height:100%;display:flex;flex-direction:column;padding:90px 100px;background:linear-gradient(160deg,#063a22,#04231a)">
+    <div style="font:700 24px/1 'Space Grotesk',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#dff900">Seção 02</div>
+    <h2 style="margin:16px 0 10px;font:700 76px/1 'Space Grotesk',sans-serif;color:#fff;letter-spacing:-.02em">Planos Básicos Corporativos</h2>
+    <div style="width:110px;height:7px;border-radius:4px;background:#dff900;box-shadow:0 0 20px rgba(223,249,0,.7)"></div>
+    <p style="margin:22px 0 0;font:500 30px/1.4 'Manrope',sans-serif;color:#c8e6cf">Cada plano acompanha <span style="color:#dff900;font-weight:700">1 AP de Teto</span> e <span style="color:#dff900;font-weight:700">1 RB</span> inclusos.</p>
+    <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:26px;margin-top:20px">
+      <div style="display:flex;align-items:center;gap:34px;padding:34px 46px;border-radius:22px;background:rgba(255,255,255,.06);box-shadow:inset 0 0 0 1px rgba(255,255,255,.12)">
+        <div style="font:700 56px/1 'Space Grotesk',sans-serif;color:#fff;min-width:230px">400MB</div>
+        <div style="flex:1;font:500 26px/1.4 'Manrope',sans-serif;color:#a9c9b3">Ideal para escritórios e ambientes corporativos.</div>
+        <div style="font:700 60px/1 'Space Grotesk',sans-serif;color:#dff900">R$ 300<span style="font-size:26px;color:#a9c9b3">/mês</span></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:34px;padding:34px 46px;border-radius:22px;background:rgba(255,255,255,.06);box-shadow:inset 0 0 0 1px rgba(255,255,255,.12)">
+        <div style="font:700 56px/1 'Space Grotesk',sans-serif;color:#fff;min-width:230px">600MB</div>
+        <div style="flex:1;font:500 26px/1.4 'Manrope',sans-serif;color:#a9c9b3">Ideal para escritórios e ambientes corporativos.</div>
+        <div style="font:700 60px/1 'Space Grotesk',sans-serif;color:#dff900">R$ 400<span style="font-size:26px;color:#a9c9b3">/mês</span></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:34px;padding:34px 46px;border-radius:22px;background:rgba(255,255,255,.06);box-shadow:inset 0 0 0 1px rgba(255,255,255,.12)">
+        <div style="font:700 56px/1 'Space Grotesk',sans-serif;color:#fff;min-width:230px">1 GIGA</div>
+        <div style="flex:1;font:500 26px/1.4 'Manrope',sans-serif;color:#a9c9b3">Ideal para escritórios e ambientes corporativos.</div>
+        <div style="font:700 60px/1 'Space Grotesk',sans-serif;color:#dff900">R$ 500<span style="font-size:26px;color:#a9c9b3">/mês</span></div>
+      </div>
+    </div>
+    <div style="padding:24px 34px;border-radius:18px;background:#dff900;display:flex;align-items:center;gap:20px">
+      <span style="font:800 26px/1.3 'Manrope',sans-serif;color:#06301c">OBS: a cada AP de Teto e RB adicionado, há um acréscimo de <span style="background:#06301c;color:#dff900;padding:2px 12px;border-radius:8px">R$ 100,00</span> no valor do plano.</span>
+    </div>
+  </section>
+
+  <!-- 4. PODER DA CONEXÃO -->
+  <section data-label="Infraestrutura" data-speaker-notes="Nossa infraestrutura: CPD próprio, links redundantes, monitoramento 24/7 e baixa latência." style="width:100%;height:100%;display:flex;padding:90px 100px;gap:60px;background:linear-gradient(160deg,#1f9d10,#0d6b0a);align-items:center">
+    <div style="flex:1">
+      <div style="font:700 24px/1 'Space Grotesk',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#dff900">Seção 03</div>
+      <h2 style="margin:16px 0 10px;font:700 72px/1.02 'Space Grotesk',sans-serif;color:#fff;letter-spacing:-.02em">O Poder da Nossa Conexão</h2>
+      <div style="width:110px;height:7px;border-radius:4px;background:#dff900;box-shadow:0 0 20px rgba(223,249,0,.7)"></div>
+      <p style="margin:32px 0 0;font:500 32px/1.55 'Manrope',sans-serif;color:#eafce0">Contamos com um <span style="color:#dff900;font-weight:800">CPD próprio</span>, links redundantes e monitoramento constante. Nossa fibra é dimensionada para estabilidade real e velocidade que não cai nos horários de pico.</p>
+      <div style="display:flex;gap:20px;margin-top:44px">
+        <div style="flex:1;padding:28px;border-radius:18px;background:rgba(4,30,16,.35);box-shadow:inset 0 0 0 1px rgba(223,249,0,.3)"><div style="font:700 48px/1 'Space Grotesk',sans-serif;color:#dff900">24/7</div><div style="margin-top:10px;font:500 22px/1.3 'Manrope',sans-serif;color:#eafce0">Monitoramento</div></div>
+        <div style="flex:1;padding:28px;border-radius:18px;background:rgba(4,30,16,.35);box-shadow:inset 0 0 0 1px rgba(223,249,0,.3)"><div style="font:700 48px/1 'Space Grotesk',sans-serif;color:#dff900">Links</div><div style="margin-top:10px;font:500 22px/1.3 'Manrope',sans-serif;color:#eafce0">Redundantes</div></div>
+        <div style="flex:1;padding:28px;border-radius:18px;background:rgba(4,30,16,.35);box-shadow:inset 0 0 0 1px rgba(223,249,0,.3)"><div style="font:700 48px/1 'Space Grotesk',sans-serif;color:#dff900">Baixa</div><div style="margin-top:10px;font:500 22px/1.3 'Manrope',sans-serif;color:#eafce0">Latência</div></div>
+      </div>
+    </div>
+    <div style="flex:0 0 720px;height:800px;position:relative;border-radius:28px;overflow:hidden;box-shadow:0 40px 80px -30px rgba(0,40,20,.7),inset 0 0 0 4px rgba(223,249,0,.45)">
+      <img src="assets/datacenter.jpg" alt="Data Center" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,28,15,0) 55%,rgba(4,28,15,.9))"></div>
+      <div style="position:absolute;left:34px;bottom:32px;display:inline-flex;align-items:center;gap:12px;padding:14px 24px;border-radius:999px;background:rgba(4,28,15,.72);box-shadow:inset 0 0 0 1px rgba(223,249,0,.4)">
+        <span style="width:12px;height:12px;border-radius:50%;background:#dff900;box-shadow:0 0 12px #dff900"></span>
+        <span style="font:700 26px/1 'Space Grotesk',sans-serif;color:#fff">Nosso CPD · Data Center</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. EQUIPAMENTOS -->
+  <section data-label="Equipamentos" data-speaker-notes="Equipamentos de última geração inclusos: roteador Wi-Fi 6, AP de teto, RouterBoard e SuperCam." style="width:100%;height:100%;display:flex;flex-direction:column;padding:90px 100px;background:linear-gradient(160deg,#063a22,#04231a)">
+    <div style="text-align:center;font:700 24px/1 'Space Grotesk',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#dff900">Seção 04</div>
+    <h2 style="margin:16px 0 12px;text-align:center;font:700 76px/1 'Space Grotesk',sans-serif;color:#fff;letter-spacing:-.02em">Tecnologia de Ponta</h2>
+    <div style="width:110px;height:7px;border-radius:4px;background:#dff900;box-shadow:0 0 20px rgba(223,249,0,.7);margin:0 auto"></div>
+    <div style="flex:1;display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:52px">
+      <div style="display:flex;flex-direction:column;border-radius:24px;overflow:hidden;background:#fff;box-shadow:0 30px 60px -26px rgba(0,40,20,.5)">
+        <div style="height:300px;display:flex;align-items:center;justify-content:center;padding:26px;background:#fff"><img src="assets/prod-roteador.png" alt="Roteador" style="max-width:88%;max-height:250px;object-fit:contain"></div>
+        <div style="padding:26px 28px 30px"><div style="font:700 20px/1 'Space Grotesk',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#0b8a45">Wi-Fi 6</div><h3 style="margin:10px 0 8px;font:700 30px/1.1 'Space Grotesk',sans-serif;color:#06301c">Roteador 4 Antenas</h3><p style="margin:0;font:500 22px/1.4 'Manrope',sans-serif;color:#4a6656">Alcance extremo e estabilidade.</p></div>
+      </div>
+      <div style="display:flex;flex-direction:column;border-radius:24px;overflow:hidden;background:#fff;box-shadow:0 30px 60px -26px rgba(0,40,20,.5)">
+        <div style="height:300px;display:flex;align-items:center;justify-content:center;padding:26px;background:#fff"><img src="assets/prod-apteto.png" alt="AP de Teto" style="max-width:80%;max-height:250px;object-fit:contain"></div>
+        <div style="padding:26px 28px 30px"><div style="font:700 20px/1 'Space Grotesk',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#0b8a45">Corporativo</div><h3 style="margin:10px 0 8px;font:700 30px/1.1 'Space Grotesk',sans-serif;color:#06301c">AP de Teto</h3><p style="margin:0;font:500 22px/1.4 'Manrope',sans-serif;color:#4a6656">Cobertura sem pontos cegos.</p></div>
+      </div>
+      <div style="display:flex;flex-direction:column;border-radius:24px;overflow:hidden;background:#fff;box-shadow:0 30px 60px -26px rgba(0,40,20,.5)">
+        <div style="height:300px;display:flex;align-items:center;justify-content:center;padding:26px;background:#fff"><img src="assets/prod-rb.png" alt="RouterBoard" style="max-width:88%;max-height:250px;object-fit:contain"></div>
+        <div style="padding:26px 28px 30px"><div style="font:700 20px/1 'Space Grotesk',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#0b8a45">RouterBoard</div><h3 style="margin:10px 0 8px;font:700 30px/1.1 'Space Grotesk',sans-serif;color:#06301c">RB — Gestão</h3><p style="margin:0;font:500 22px/1.4 'Manrope',sans-serif;color:#4a6656">Rede de alta performance.</p></div>
+      </div>
+      <div style="display:flex;flex-direction:column;border-radius:24px;overflow:hidden;background:#fff;box-shadow:0 30px 60px -26px rgba(0,40,20,.5)">
+        <div style="height:300px;display:flex;align-items:center;justify-content:center;padding:26px;background:#fff"><img src="assets/prod-camera.png" alt="SuperCam" style="max-width:88%;max-height:250px;object-fit:contain"></div>
+        <div style="padding:26px 28px 30px"><div style="font:700 20px/1 'Space Grotesk',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#0b8a45">Segurança</div><h3 style="margin:10px 0 8px;font:700 30px/1.1 'Space Grotesk',sans-serif;color:#06301c">SuperCam</h3><p style="margin:0;font:500 22px/1.4 'Manrope',sans-serif;color:#4a6656">Monitoramento em alta definição.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. TELEFONIA -->
+  <section data-label="Telefonia Tá On" data-speaker-notes="Planos de telefonia móvel Tá On. A partir de 11GB chamadas ilimitadas. Todos incluem WhatsApp, Skeelo, Waze e Uber grátis. 33GB é o melhor custo-benefício." style="width:100%;height:100%;display:flex;flex-direction:column;padding:80px 100px;background:linear-gradient(160deg,#1f9d10,#0d6b0a)">
+    <div style="display:flex;align-items:center;gap:28px">
+      <img src="assets/prod-chip.png" alt="Chip 4G" style="height:150px;width:auto;filter:drop-shadow(0 0 22px rgba(223,249,0,.6)) drop-shadow(0 16px 24px rgba(0,25,12,.5));transform:rotate(-5deg)">
+      <div>
+        <div style="font:700 24px/1 'Space Grotesk',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#dff900">Seção 05 · Planos Tá On</div>
+        <h2 style="margin:12px 0 8px;font:700 66px/1 'Space Grotesk',sans-serif;color:#fff;letter-spacing:-.02em">Conexão que vai com você</h2>
+        <div style="width:110px;height:7px;border-radius:4px;background:#dff900;box-shadow:0 0 20px rgba(223,249,0,.7)"></div>
+      </div>
+    </div>
+    <p style="margin:22px 0 0;font:600 26px/1.4 'Manrope',sans-serif;color:#eafce0">Cobertura nacional · WhatsApp, Skeelo, Waze e Uber <span style="color:#dff900">sem descontar da franquia</span> · Chamadas ilimitadas a partir de 11GB.</p>
+    <div style="flex:1;display:grid;grid-template-columns:repeat(7,1fr);gap:16px;align-items:stretch;margin-top:34px">
+      <div style="display:flex;flex-direction:column;border-radius:18px;padding:26px 18px;background:rgba(255,255,255,.1);box-shadow:inset 0 0 0 1px rgba(255,255,255,.16)"><div style="font:700 46px/1 'Space Grotesk',sans-serif;color:#fff">07<span style="font-size:22px;color:#dff900"> GB</span></div><div style="margin-top:auto;padding-top:22px;font:700 30px/1 'Space Grotesk',sans-serif;color:#dff900">R$ 35,90</div></div>
+      <div style="display:flex;flex-direction:column;border-radius:18px;padding:26px 18px;background:rgba(255,255,255,.1);box-shadow:inset 0 0 0 1px rgba(255,255,255,.16)"><div style="font:700 46px/1 'Space Grotesk',sans-serif;color:#fff">11<span style="font-size:22px;color:#dff900"> GB</span></div><div style="margin-top:auto;padding-top:22px;font:700 30px/1 'Space Grotesk',sans-serif;color:#dff900">R$ 40,90</div></div>
+      <div style="display:flex;flex-direction:column;border-radius:18px;padding:26px 18px;background:rgba(255,255,255,.1);box-shadow:inset 0 0 0 1px rgba(255,255,255,.16)"><div style="font:700 46px/1 'Space Grotesk',sans-serif;color:#fff">16<span style="font-size:22px;color:#dff900"> GB</span></div><div style="margin-top:auto;padding-top:22px;font:700 30px/1 'Space Grotesk',sans-serif;color:#dff900">R$ 50,99</div></div>
+      <div style="display:flex;flex-direction:column;border-radius:18px;padding:26px 18px;background:rgba(255,255,255,.1);box-shadow:inset 0 0 0 1px rgba(255,255,255,.16)"><div style="font:700 46px/1 'Space Grotesk',sans-serif;color:#fff">23<span style="font-size:22px;color:#dff900"> GB</span></div><div style="margin-top:auto;padding-top:22px;font:700 30px/1 'Space Grotesk',sans-serif;color:#dff900">R$ 63,99</div></div>
+      <div style="position:relative;display:flex;flex-direction:column;border-radius:18px;padding:30px 18px;background:rgba(223,249,0,.18);box-shadow:inset 0 0 0 3px #dff900,0 0 30px rgba(223,249,0,.5)"><div style="position:absolute;top:-16px;left:50%;transform:translateX(-50%);white-space:nowrap;padding:7px 14px;border-radius:999px;background:#dff900;color:#06301c;font:700 15px/1 'Space Grotesk',sans-serif;text-transform:uppercase;letter-spacing:.04em">★ Melhor Custo</div><div style="font:700 52px/1 'Space Grotesk',sans-serif;color:#fff">33<span style="font-size:24px;color:#dff900"> GB</span></div><div style="margin-top:auto;padding-top:22px;font:700 34px/1 'Space Grotesk',sans-serif;color:#dff900">R$ 79,99</div></div>
+      <div style="display:flex;flex-direction:column;border-radius:18px;padding:26px 18px;background:rgba(255,255,255,.1);box-shadow:inset 0 0 0 1px rgba(255,255,255,.16)"><div style="font:700 46px/1 'Space Grotesk',sans-serif;color:#fff">41<span style="font-size:22px;color:#dff900"> GB</span></div><div style="margin-top:auto;padding-top:22px;font:700 30px/1 'Space Grotesk',sans-serif;color:#dff900">R$ 89,99</div></div>
+      <div style="display:flex;flex-direction:column;border-radius:18px;padding:26px 18px;background:rgba(255,255,255,.1);box-shadow:inset 0 0 0 1px rgba(255,255,255,.16)"><div style="font:700 46px/1 'Space Grotesk',sans-serif;color:#fff">50<span style="font-size:22px;color:#dff900"> GB</span></div><div style="margin-top:auto;padding-top:22px;font:700 30px/1 'Space Grotesk',sans-serif;color:#dff900">R$ 94,99</div></div>
+    </div>
+    <div style="margin-top:26px;display:flex;gap:14px">
+      <span style="padding:12px 22px;border-radius:999px;background:rgba(4,30,16,.4);font:700 22px/1 'Manrope',sans-serif;color:#dff900">WhatsApp Grátis</span>
+      <span style="padding:12px 22px;border-radius:999px;background:rgba(4,30,16,.4);font:700 22px/1 'Manrope',sans-serif;color:#dff900">Skeelo</span>
+      <span style="padding:12px 22px;border-radius:999px;background:rgba(4,30,16,.4);font:700 22px/1 'Manrope',sans-serif;color:#dff900">Waze</span>
+      <span style="padding:12px 22px;border-radius:999px;background:rgba(4,30,16,.4);font:700 22px/1 'Manrope',sans-serif;color:#dff900">Uber Free</span>
+    </div>
+  </section>
+
+  <!-- 7. TURBINE -->
+  <section data-label="Turbine Seu Plano" data-speaker-notes="Upsell: adicione TV por +R$30 ou Câmera por +R$40. Incluindo hoje, a instalação é 100% grátis." style="width:100%;height:100%;display:flex;flex-direction:column;padding:80px 100px;background:#dff900">
+    <div style="text-align:center;font:700 24px/1 'Space Grotesk',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#06301c">Seção 06 · Upsell</div>
+    <h2 style="margin:14px 0 10px;text-align:center;font:700 76px/1 'Space Grotesk',sans-serif;color:#06301c;letter-spacing:-.02em">Turbine Seu Plano</h2>
+    <div style="width:110px;height:7px;border-radius:4px;background:#06301c;margin:0 auto"></div>
+    <div style="flex:1;display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:44px">
+      <div style="display:flex;flex-direction:column;border-radius:26px;overflow:hidden;background:#fff;box-shadow:0 30px 60px -26px rgba(0,40,20,.4)">
+        <div style="height:330px;display:flex;align-items:center;justify-content:center;padding:26px;background:linear-gradient(160deg,#eef7ec,#dcefda);position:relative"><img src="assets/prod-tv.png" alt="TV" style="max-width:78%;max-height:280px;object-fit:contain"><img src="assets/prod-roku.png" alt="Roku" style="position:absolute;bottom:24px;right:30px;width:150px;object-fit:contain"></div>
+        <div style="padding:32px 40px 36px"><div style="font:700 20px/1 'Space Grotesk',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#0b8a45">TV + Streaming</div><h3 style="margin:12px 0 10px;font:700 40px/1.05 'Space Grotesk',sans-serif;color:#06301c">Transforme sua sala!</h3><p style="margin:0;font:500 26px/1.4 'Manrope',sans-serif;color:#4a6656">Grade completa de canais por apenas <span style="color:#06301c;font-weight:700">+ R$ 30,00/mês</span>.</p></div>
+      </div>
+      <div style="display:flex;flex-direction:column;border-radius:26px;overflow:hidden;background:#fff;box-shadow:0 30px 60px -26px rgba(0,40,20,.4)">
+        <div style="height:330px;display:flex;align-items:center;justify-content:center;padding:26px;background:linear-gradient(160deg,#eef7ec,#dcefda)"><img src="assets/prod-camera.png" alt="SuperCam" style="max-width:78%;max-height:280px;object-fit:contain"></div>
+        <div style="padding:32px 40px 36px"><div style="font:700 20px/1 'Space Grotesk',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#0b8a45">Segurança 24h</div><h3 style="margin:12px 0 10px;font:700 40px/1.05 'Space Grotesk',sans-serif;color:#06301c">Proteja o que importa.</h3><p style="margin:0;font:500 26px/1.4 'Manrope',sans-serif;color:#4a6656">SuperCam com monitoramento 24h por <span style="color:#06301c;font-weight:700">+ R$ 40,00/mês</span>.</p></div>
+      </div>
+    </div>
+    <div style="margin-top:30px;padding:26px 40px;border-radius:20px;background:#06301c;text-align:center;font:800 30px/1.3 'Space Grotesk',sans-serif;color:#fff">Condição especial: incluindo TV ou Câmera hoje, a <span style="background:#dff900;color:#06301c;padding:2px 14px;border-radius:10px">INSTALAÇÃO É 100% GRÁTIS!</span></div>
+  </section>
+
+  <!-- 8. CONTATO -->
+  <section data-label="Contato" data-speaker-notes="Fechamento: falar com o consultor Eduardo pelo WhatsApp (82) 92000-4834 ou escanear o QR Code." style="width:100%;height:100%;display:flex;align-items:center;padding:90px 100px;gap:60px;background:linear-gradient(135deg,#063a22,#04231a)">
+    <div style="flex:0 0 460px;position:relative;display:flex;justify-content:center;align-items:flex-end;height:900px">
+      <div style="position:absolute;bottom:90px;left:50%;transform:translateX(-50%);width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(223,249,0,.34),rgba(223,249,0,0) 66%)"></div>
+      <img src="assets/eduardo.png" alt="Eduardo" style="position:relative;z-index:1;height:820px;width:auto;object-fit:contain;object-position:bottom;filter:drop-shadow(0 30px 40px rgba(0,0,0,.5))">
+      <div style="position:absolute;z-index:2;bottom:40px;left:50%;transform:translateX(-50%) rotate(-2deg);padding:16px 34px;border-radius:14px;background:linear-gradient(120deg,#0a4d2b,#063a22);box-shadow:0 18px 34px -12px rgba(0,0,0,.6);text-align:center;white-space:nowrap">
+        <div style="font:600 20px/1 'Space Grotesk',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#dff900">Consultor Comercial</div>
+        <div style="margin-top:6px;font:700 40px/1 'Space Grotesk',sans-serif;color:#fff">Eduardo</div>
+      </div>
+    </div>
+    <div style="flex:1">
+      <div style="font:700 24px/1 'Space Grotesk',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#dff900">Atendimento Rápido</div>
+      <h2 style="margin:16px 0 10px;font:700 74px/1.02 'Space Grotesk',sans-serif;color:#fff;letter-spacing:-.02em">Fale com a gente agora</h2>
+      <div style="width:110px;height:7px;border-radius:4px;background:#dff900;box-shadow:0 0 20px rgba(223,249,0,.7)"></div>
+      <p style="margin:30px 0 34px;font:500 30px/1.5 'Manrope',sans-serif;color:#cfe6d8">Escaneie o QR Code ou fale com nosso atendimento pelo WhatsApp.</p>
+      <div style="display:flex;align-items:center;gap:40px">
+        <div style="display:inline-flex;align-items:center;gap:20px;padding:20px 30px;border-radius:999px;background:#dff900;box-shadow:0 20px 44px -12px rgba(223,249,0,.7)">
+          <span style="width:64px;height:64px;border-radius:50%;background:#06301c;display:grid;place-items:center"><svg width="34" height="34" viewBox="0 0 24 24" fill="#dff900"><path d="M12 2a10 10 0 0 0-8.6 15.06L2 22l5.06-1.33A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-3 .79.8-2.92-.2-.31A8.2 8.2 0 1 1 12 20.2z"></path></svg></span>
+          <span><span style="display:block;font:700 18px/1.2 'Manrope',sans-serif;color:#06301c;text-transform:uppercase;letter-spacing:.05em;opacity:.8">WhatsApp</span><span style="display:block;font:700 44px/1.1 'Space Grotesk',sans-serif;color:#06301c">(82) 92000-4834</span></span>
+        </div>
+        <div style="padding:14px;border-radius:20px;background:#fff;box-shadow:inset 0 0 0 3px #dff900,0 16px 34px -12px rgba(0,0,0,.5)"><img src="assets/qrcode.png" alt="QR Code" style="display:block;width:180px;height:180px;border-radius:10px"></div>
+      </div>
+      <div style="margin-top:34px;font:700 30px/1 'Space Grotesk',sans-serif;color:#fff">Vem ser um <span style="color:#dff900">Super Conectado!</span></div>
+    </div>
+  </section>
+
+</x-import>
+</x-dc>
+</body>
+</html>

@@ -12,34 +12,35 @@ const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent
   "Olá, Eduardo! Gostaria de conversar sobre a apresentação comercial da Super Connect para a Carajás Home Center."
 )}`;
 
-type Client = { name: string; logo: string };
+type Client = { name: string; logo: string; fit?: "cover" | "contain" };
 
 const LOGOS = {
-  superConnect: "https://i.imgur.com/hAG9YIi.png",
-  carajas: "https://i.imgur.com/VOen6Fe.png",
+  superConnect: "/images/original/hAG9YIi.png",
+  carajas: "/images/original/VOen6Fe.png",
   clients: [
-    { name: "Grupo Coagro", logo: "https://i.imgur.com/W0zMSHx.png" },
-    { name: "Mibasa Mineração", logo: "https://i.imgur.com/X7FFjbV.png" },
-    { name: "Cimavel", logo: "https://i.imgur.com/5J4kjVk.png" },
-    { name: "Unimed", logo: "https://i.imgur.com/IkWzDyD.png" },
-    { name: "Lotus ICT", logo: "https://i.imgur.com/es00nMJ.png" },
-    { name: "AeC Centro de Contatos", logo: "https://i.imgur.com/XRY3uzs.png" },
+    { name: "Grupo Coagro", logo: "/images/original/W0zMSHx.png" },
+    { name: "Mibasa Mineração", logo: "/images/original/X7FFjbV.png" },
+    { name: "Cimavel", logo: "/images/original/5J4kjVk.png" },
+    { name: "Unimed", logo: "/images/original/IkWzDyD.png" },
+    { name: "Lotus ICT", logo: "/images/original/es00nMJ.png" },
+    { name: "AeC Centro de Contatos", logo: "/images/original/XRY3uzs.png" },
+    { name: "Mineração Vale Verde", logo: "/images/original/q0T8BWz.png", fit: "contain" },
   ] as Client[],
 };
 
 const IMAGES = {
-  bgTexture: "https://i.imgur.com/50StUE0.jpeg",
-  robot: "https://i.imgur.com/WQMLI6P.png",
-  datacenter: "https://i.imgur.com/DSjzprO.jpeg",
-  headquarters: "https://i.imgur.com/6dUo2Ku.png",
-  operationsCenter: "https://i.imgur.com/Gq3gLLP.jpeg",
-  team: "https://i.imgur.com/Xvw26Lq.jpeg",
-  monitoring: "https://i.imgur.com/bSRFNFI.jpeg",
-  monitoringPanel: "https://i.imgur.com/Gs1IstJ.jpeg",
-  apTeto: "https://i.imgur.com/T0w7gWB.png",
-  routerBoard: "https://i.imgur.com/zICMU9G.png",
-  eduardo: "https://i.imgur.com/bNxrgdC.png",
-  qrCode: "https://i.imgur.com/HFT21j8.png",
+  bgTexture: "/images/original/50StUE0.jpeg",
+  robot: "/images/original/WQMLI6P.png",
+  datacenter: "/images/original/DSjzprO.jpeg",
+  headquarters: "/images/original/6dUo2Ku.png",
+  operationsCenter: "/images/original/Gq3gLLP.jpeg",
+  team: "/images/original/Xvw26Lq.jpeg",
+  monitoring: "/images/original/bSRFNFI.jpeg",
+  monitoringPanel: "/images/original/Gs1IstJ.jpeg",
+  apTeto: "/images/original/T0w7gWB.png",
+  routerBoard: "/images/original/zICMU9G.png",
+  eduardo: "/images/original/bNxrgdC.png",
+  qrCode: "/images/original/HFT21j8.png",
 };
 
 const CARAJAS_OPPORTUNITIES = [
@@ -851,6 +852,7 @@ export default function App() {
                 <img
                   src={client.logo}
                   alt={client.name}
+                  style={client.fit ? { objectFit: client.fit } : undefined}
                   draggable={false}
                   decoding="async"
                   loading={client.name === "Grupo Coagro" ? "eager" : "lazy"}
